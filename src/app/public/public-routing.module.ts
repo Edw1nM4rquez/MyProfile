@@ -3,13 +3,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { PublicComponent } from './public.component';
 
 const routes: Routes = [
-  { 
-    path: '', component:PublicComponent,
-    children:[
+  {
+    path: '', component: PublicComponent,
+    children: [
       {
-      path: 'home', 
-      loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) 
-      }    
+        path: '',
+        loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+      },
+      {
+        path: 'projects',
+        loadComponent: () => import('./pages/projects/projects.component').then(m => m.ProjectsComponent)
+      },
+      {
+        path:'certificates',
+        loadComponent: () => import('./pages/certification/certification.component').then(m => m.CertificationComponent)
+      }
     ]
   }
 ];
