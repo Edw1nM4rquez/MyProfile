@@ -4,7 +4,7 @@ import { PublicComponent } from './public.component';
 
 const routes: Routes = [
   {
-    path: '', component: PublicComponent,
+    path: 'MyProfile', component: PublicComponent,
     children: [
       {
         path: '',
