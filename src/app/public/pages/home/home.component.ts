@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import * as THREE from 'three';
 
 @Component({
@@ -8,7 +9,9 @@ import * as THREE from 'three';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
     this.init();
@@ -53,6 +56,10 @@ export class HomeComponent implements OnInit {
     }
 
     init();
+   }
+
+   public navigateExperience(){
+      this.router.navigate(['/MyProfile/experience']);
    }
 
 }

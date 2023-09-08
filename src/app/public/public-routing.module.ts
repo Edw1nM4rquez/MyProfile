@@ -4,14 +4,14 @@ import { PublicComponent } from './public.component';
 
 const routes: Routes = [
   {
-    path: 'MyProfile', component: PublicComponent,
+    path: '', component: PublicComponent,
     children: [
       {
         path: '',
         loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
       },
       {
-        path: 'projects',
+        path: 'experience',
         loadComponent: () => import('./pages/projects/projects.component').then(m => m.ProjectsComponent)
       },
       {
