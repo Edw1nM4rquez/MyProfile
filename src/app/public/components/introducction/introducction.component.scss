@@ -1,0 +1,40 @@
+
+.texto {
+    position: absolute;
+    left: -100%;
+    /* Comienza fuera del área visible */
+    top: 60%;
+    transform: translateY(-50%);
+    animation: moverTexto 4s linear infinite;
+    /* Animación de 4 segundos, repetir infinitamente */
+}
+
+@keyframes moverTexto {
+    0% {
+        left: -80%;
+        /* Comienza fuera del área visible */
+    }
+
+    100% {
+        left: 60%;
+        /* Termina fuera del área visible en el lado derecho */
+    }
+}
+
+
+.ghost {
+    animation: float 3s ease-out infinite;
+}
+
+@keyframes float {
+    50% {
+        transform: translate(0, 20px);
+    }
+}
+
+.skils {
+    label {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}

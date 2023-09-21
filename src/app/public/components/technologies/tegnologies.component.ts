@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-tegnologies',
   standalone:true,
   templateUrl: './tegnologies.component.html',
-  styleUrls: ['./tegnologies.component.scss']
+  styleUrls: ['./tegnologies.component.scss'], 
 })
 export class TegnologiesComponent {
 

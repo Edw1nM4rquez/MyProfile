@@ -15,198 +15,18 @@
     </div>
     <div
         class="containerProjects  lg:grid-cols-2 md:grid-cols-2 gap-8  lg:grid md:flex sm:flex md:flex-wrap sm:flex-wrap lg:ml-8 lg:mr-8">
-        <div>
-            <a href="https://roa.ups.edu.ec/#/" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row
+
+        <div *ngFor="let item of arrayExperience">
+            <a href="{{item.urlDomain}}" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row
     max-w-4xl
       hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                 <iframe class=" lg:w-[80vh] h-[25vh] rounded-t-lg   md:rounded-none md:rounded-l-lg"
-                    id="inlineFrameExample" title="Inline Frame Example" src="https://roa.ups.edu.ec/#/">
+                    id="inlineFrameExample" title="Inline Frame Example" [src]="sanitizerUrl(item.urlDomain)">
                 </iframe>
                 <div class="flex flex-col justify-between p-4 leading-normal">
                     <h5 class="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
-                        Repositorio de objetos de aprendizaje ROA</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">Este proyecto es un
-                        repositorio de objetos de aprendizaje de la Universidad Politecnica Salesiana.</p>
-                </div>
-            </a>
-        </div>
-        <div>
-            <a href="https://oeradap.ups.edu.ec/#/" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row
-    max-w-4xl
-      hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                <iframe class=" lg:w-[80vh] h-[25vh] rounded-t-lg   md:rounded-none md:rounded-l-lg"
-                    id="inlineFrameExample" title="Inline Frame Example" src="https://oeradap.ups.edu.ec/#/">
-                </iframe>
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
-                        Herramienta de adaptacion OerAdap</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">Es una herramienta que
-                        adapta los objetos de aprendizaje.
-                        Perteneciente a la Universidad Politencica Salesiana.
-                    </p>
-                </div>
-            </a>
-        </div>
-
-
-        <div>
-            <a href="https://simulab.edutech-project.org/" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row
-    max-w-4xl
-      hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                <div class="imgclass rounded-t-lg h-52  content-center flex bg-blue-500">
-                    <img class="object-cover w-full md:rounded-none md:rounded-l-lg"
-                        src="https://www.uazuay.edu.ec/themes/uazuay/images/logo.webp" alt="">
-
-                </div>
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
-                        Simuladores laborales Universidad del Azuay</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">Es una herramienta que te
-                        ayuda a obtener competencias laborales dentro de una empresa. Proyecto EduTech | Universidad del
-                        Azuay.
-                    </p>
-                </div>
-            </a>
-        </div>
-        <div>
-            <a href="https://gihp4c.blog.ups.edu.ec/educacion-vial-de-peatones-y-conductores-de-la-ciudad-de-cuenca-a-traves-de-sistemas-de-realidad-virtual"
-                class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row
-    max-w-4xl
-      hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                <iframe class=" lg:w-[80vh] h-[25vh] rounded-t-lg   md:rounded-none md:rounded-l-lg"
-                    id="inlineFrameExample" title="Inline Frame Example"
-                    src="https://gihp4c.blog.ups.edu.ec/educacion-vial-de-peatones-y-conductores-de-la-ciudad-de-cuenca-a-traves-de-sistemas-de-realidad-virtual">
-                </iframe>
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
-                        Diseño, modelado, entorno de video juegos | Universidad Politecnica Salesiana - EMOV EP</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">Dentro del Proyecto
-                        "Educación
-                        vial de peatones y conductores de la
-                        ciudad de Cuenca a través de sistemas de realidad virtual"</p>
-                </div>
-            </a>
-        </div>
-        <div>
-            <a href="https://edutech-erasmus-project.github.io/accessible_frontend_database/#/" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row
-    max-w-4xl
-      hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                <iframe class=" lg:w-[80vh] h-[25vh] rounded-t-lg   md:rounded-none md:rounded-l-lg"
-                    id="inlineFrameExample" title="Inline Frame Example"
-                    src="https://edutech-erasmus-project.github.io/accessible_frontend_database/#/">
-                </iframe>
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
-                        Componentes Accessibles</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">Propuesta de componentes
-                        accesibles con el uso de PrimeNg y Aria accesibles (ATICA).
-                    </p>
-                </div>
-            </a>
-        </div>
-
-        <div>
-            <a href="https://quikly.app/" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row
-    max-w-4xl
-      hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                <iframe class=" lg:w-[80vh] h-[25vh] rounded-t-lg   md:rounded-none md:rounded-l-lg"
-                    id="inlineFrameExample" title="Inline Frame Example" src="https://quikly.app">
-                </iframe>
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
-                        Quikly</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">Ecommerce perteneciente al
-                        Grupo Quikly y desarrollo de software.</p>
-                </div>
-            </a>
-        </div>
-
-        <div>
-            <a href="https://lorawan.tarpuq.com.ec" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row
-    max-w-4xl
-      hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                <div class="imgclass rounded-t-lg h-52  content-center flex">
-                    <img class="object-cover w-full md:rounded-none md:rounded-l-lg"
-                        src="http://tarpuq-ems.com/wp-content/uploads/2018/10/logo_tarpuq.png" alt="">
-
-                </div>
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
-                        Tarpuq | Universidad Politecnica Salesiana</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">Soporte al sistema de
-                        medición de agua Lorawan-Tarpuq.</p>
-                </div>
-            </a>
-        </div>
-
-        <div>
-            <a href="/projects" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row
-    max-w-4xl
-      hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                <div class="imgclass rounded-t-lg h-52  content-center flex">
-                    <img class="object-cover w-full md:rounded-none md:rounded-l-lg"
-                        src="https://roa.ups.edu.ec/assets/img/contacts.svg" alt="">
-
-                </div>
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
-                        Freelancer</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">Soporte a sistema contable
-                        y sistemas ecommerce,
-                        con el uso de tegnologías como Angular, Laravel, PostgreSql y Mysql.</p>
-                </div>
-            </a>
-        </div>
-
-        <div>
-            <a href="https://facty.ecuadev.com/" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row
-    max-w-4xl
-      hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                <iframe class=" lg:w-[80vh] h-[25vh] rounded-t-lg   md:rounded-none md:rounded-l-lg"
-                    id="inlineFrameExample" title="Inline Frame Example" src="https://facty.ecuadev.com/">
-                </iframe>
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
-                        Desarrollador de Aplicación</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">Proyecto de sistema para
-                        facturación electrónica de manera facíl y rapida.</p>
-                </div>
-            </a>
-        </div>
-
-
-
-
-        <div>
-            <a href="https://repositorio.edutech-project.org/" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row
-    max-w-4xl
-      hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                <iframe class=" lg:w-[80vh] h-[25vh] rounded-t-lg   md:rounded-none md:rounded-l-lg"
-                    id="inlineFrameExample" title="Inline Frame Example" src="https://roa.ups.edu.ec/#/">
-                </iframe>
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
-                        Repositorio de objetos de aprendizaje EduTech</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">Este proyecto es un
-                        repositorio de objetos de aprendizaje del Proyecto EduTech.</p>
-                </div>
-            </a>
-        </div>
-
-        <div>
-            <a href="https://oeradap.edutech-project.org/" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row
-    max-w-4xl
-      hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                <iframe class=" lg:w-[80vh] h-[25vh] rounded-t-lg   md:rounded-none md:rounded-l-lg"
-                    id="inlineFrameExample" title="Inline Frame Example" src="https://oeradap.ups.edu.ec/#/">
-                </iframe>
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
-                        Herramienta de adaptacion OerAdap EduTech</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">Es una herramienta que
-                        adapta los objetos de aprendizaje.
-                        Perteneciente del Proyecto EduTech.
-                    </p>
+                        {{item.title}}</h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">{{item.description}}</p>
                 </div>
             </a>
         </div>
@@ -217,34 +37,17 @@
     </div>
     <div
         class="containerProjects  lg:grid-cols-2 md:grid-cols-2 gap-8  lg:grid md:flex sm:flex md:flex-wrap sm:flex-wrap lg:ml-8 lg:mr-8">
-        <div>
-            <a href="https://creative-speculoos-d2788c.netlify.app/" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row
-max-w-4xl
-  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+        <div *ngFor="let item of arrayProjects">
+            <a href="{{item.urlDomain}}" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row
+    max-w-4xl
+      hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                 <iframe class=" lg:w-[80vh] h-[25vh] rounded-t-lg   md:rounded-none md:rounded-l-lg"
-                    id="inlineFrameExample" title="Inline Frame Example" src="https://creative-speculoos-d2788c.netlify.app/">
+                    id="inlineFrameExample" title="Inline Frame Example" [src]="sanitizerUrl(item.urlDomain)">
                 </iframe>
                 <div class="flex flex-col justify-between p-4 leading-normal">
                     <h5 class="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
-                        Paleleria</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">Este proyecto es una pequeña página web 
-                        informativa que hace regencia a una papelería. Esta realizada con el framework de <span class="font-semibold">Angular</span>.</p>
-                </div>
-            </a>
-        </div>
-        
-        <div>
-            <a href="https://64fe7fbfecfe8313b9586bb7--quiet-sawine-33d9bf.netlify.app/" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row
-max-w-4xl
-  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                <iframe class=" lg:w-[80vh] h-[25vh] rounded-t-lg   md:rounded-none md:rounded-l-lg"
-                    id="inlineFrameExample" title="Inline Frame Example" src="https://64fe7fbfecfe8313b9586bb7--quiet-sawine-33d9bf.netlify.app/">
-                </iframe>
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
-                        Ricky & Morty</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">Este proyecto es una pequeña lista de personajes de 
-                        la seria Ricky & Morty fue desarrollada con <span class="font-semibold">React</span>.</p>
+                        {{item.title}}</h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">{{item.description}}</p>
                 </div>
             </a>
         </div>
