@@ -3,7 +3,7 @@ name: Deploy Angular to GitHub Pages
 on:
   push:
     branches:
-      - master  # Se ejecuta cuando haces push a master
+      - master  # Trigger on push to master
 
 jobs:
   build-deploy:
@@ -16,16 +16,16 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Angular 16+ necesita Node 18
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
 
       - name: Build Angular project
-        run: npm run build -- --configuration production
+        run: ng build --configuration production --output-path=dist/MyProfile --base-href "/MyProfile/"
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages
-          folder: dist/MyProfile
+          branch: gh-pages          # Deploy to this branch
+          folder: dist/MyProfile    # Folder to deploy
