@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 
 
    public navigateExperience(){
-      this.router.navigate(['my-profile/experience']);
+      this.router.navigate(['MyProfile/experience']);
    }
 
 }
