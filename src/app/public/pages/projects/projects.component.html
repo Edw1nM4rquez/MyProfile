@@ -1,57 +1,117 @@
-<div class="bg-slate-50 w-full pb-8 pt-2">
-    <div class="title text-center ">
-        <h2 class="text-black p-5 font-semibold text-2xl">EXPERIENCIAS DE TRABAJO</h2>
-    </div>
-    <div class="description text-center m-5 text-lg">
-        <div class="text text-justify">
-            <p>Durante mi trayectoria y experiencia he realizado algunos proyectos, con el uso de varias tecnologías.
-                Esto
-                me ha ido encaminando en el mundo del desarrollo de software.</p>
-            <p>Uno de los puntos y fuertes mas importantes siendo proyectos que ayuden a la accesibilidad web.</p>
-        </div>
-        <h3 class="font-semibold m-1">
-            Aquí una muestra de mi trabajo realizado…
-        </h3>
-    </div>
+<div
+  class="bg-gradient-to-br from-slate-100 to-slate-300 w-full pb-12 pt-6 min-h-screen"
+>
+  <div class="title text-center mb-4">
+    <h2
+      class="text-black p-5 font-extrabold text-3xl tracking-wide drop-shadow-lg"
+    >
+      EXPERIENCIAS DE TRABAJO
+    </h2>
+  </div>
+  <div class="description text-center mx-auto mb-8 max-w-6xl text-lg">
     <div
-        class="containerProjects  lg:grid-cols-2 md:grid-cols-2 gap-8  lg:grid md:flex sm:flex md:flex-wrap sm:flex-wrap lg:ml-8 lg:mr-8">
-
-        <div *ngFor="let item of arrayExperience">
-            <a href="{{item.urlDomain}}" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row
-    max-w-4xl
-      hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                <iframe class=" lg:w-[80vh] h-[25vh] rounded-t-lg   md:rounded-none md:rounded-l-lg"
-                    id="inlineFrameExample" title="Inline Frame Example" [src]="sanitizerUrl(item.urlDomain)">
-                </iframe>
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
-                        {{item.title}}</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">{{item.description}}</p>
-                </div>
-            </a>
-        </div>
+      class="text text-justify bg-white rounded-xl shadow-md p-6 mb-4 border border-gray-200"
+    >
+      <p>
+        Durante mi trayectoria profesional he participado en diversos proyectos
+        que han abarcado desde el desarrollo web hasta la implementación de
+        soluciones empresariales. A lo largo de estos años, he adquirido
+        experiencia en el uso de tecnologías modernas como Angular, React,
+        Node.js y bases de datos relacionales y no relacionales.
+        <br /><br />
+        Cada proyecto ha representado un reto único, permitiéndome fortalecer
+        mis habilidades técnicas y mi capacidad para trabajar en equipo,
+        gestionar tiempos y entregar resultados de calidad.
+      </p>
+      <p>
+        Uno de los aspectos más relevantes de mi experiencia ha sido el enfoque
+        en la accesibilidad web, asegurando que las aplicaciones sean inclusivas
+        y fáciles de usar para todas las personas, independientemente de sus
+        capacidades.
+        <br /><br />
+        He implementado buenas prácticas de diseño accesible, optimización de
+        rendimiento y pruebas de usabilidad, contribuyendo a crear productos
+        digitales que realmente impactan positivamente en los usuarios.
+      </p>
     </div>
-
-    <div class="title text-center ">
-        <h2 class="text-black p-5 font-semibold text-2xl">PROYECTOS PERSONALES </h2>
-    </div>
+    <h3 class="font-semibold m-1 text-xl text-gray-800">
+      Aquí puedes ver una muestra representativa de mi trabajo realizado…
+    </h3>
+  </div>
+  <div
+    class="containerProjects grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-10 px-4 lg:px-16"
+  >
     <div
-        class="containerProjects  lg:grid-cols-2 md:grid-cols-2 gap-8  lg:grid md:flex sm:flex md:flex-wrap sm:flex-wrap lg:ml-8 lg:mr-8">
-        <div *ngFor="let item of arrayProjects">
-            <a href="{{item.urlDomain}}" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row
-    max-w-4xl
-      hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                <iframe class=" lg:w-[80vh] h-[25vh] rounded-t-lg   md:rounded-none md:rounded-l-lg"
-                    id="inlineFrameExample" title="Inline Frame Example" [src]="sanitizerUrl(item.urlDomain)">
-                </iframe>
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold text-center tracking-tight text-gray-900 dark:text-white">
-                        {{item.title}}</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-justify">{{item.description}}</p>
-                </div>
-            </a>
+      *ngFor="let item of arrayExperience"
+      class="transition-transform hover:scale-105"
+    >
+      <a
+        href="{{ item.urlDomain }}"
+        target="_blank"
+        class="flex flex-col md:flex-row items-center bg-white border-2 rounded-xl shadow-lg hover:shadow-2xl hover:bg-blue-50 overflow-hidden"
+      >
+        <iframe
+          class="lg:w-[80vh] h-[25vh] rounded-t-xl md:rounded-none md:rounded-l-xl border-b-2 md:border-b-0 md:border-r-2"
+          id="inlineFrameExample"
+          title="Inline Frame Example"
+          [src]="sanitizerUrl(item.urlDomain)"
+        >
+        </iframe>
+        <div class="flex flex-col justify-between p-6 leading-normal w-full">
+          <h5
+            class="mb-2 text-2xl font-bold text-center tracking-tight text-blue-900 dark:text-blue-200"
+          >
+            {{ item.title }}
+          </h5>
+          <p
+            class="mb-3 font-normal text-gray-700 dark:text-gray-300 text-justify"
+          >
+            {{ item.description }}
+          </p>
         </div>
-
-
+      </a>
     </div>
+  </div>
+
+  <div class="title text-center mt-16 mb-4">
+    <h2
+      class="text-black p-5 font-extrabold text-3xl tracking-wide drop-shadow-lg"
+    >
+      PROYECTOS PERSONALES
+    </h2>
+  </div>
+  <div
+    class="containerProjects grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-10 px-4 lg:px-16"
+  >
+    <div
+      *ngFor="let item of arrayProjects"
+      class="transition-transform hover:scale-105"
+    >
+      <a
+        href="{{ item.urlDomain }}"
+        target="_blank"
+        class="flex flex-col md:flex-row items-center bg-white border-2 rounded-xl shadow-lg hover:shadow-2xl hover:bg-green-50 overflow-hidden"
+      >
+        <iframe
+          class="lg:w-[80vh] h-[25vh] rounded-t-xl md:rounded-none md:rounded-l-xl border-b-2 md:border-b-0 md:border-r-2"
+          id="inlineFrameExample"
+          title="Inline Frame Example"
+          [src]="sanitizerUrl(item.urlDomain)"
+        >
+        </iframe>
+        <div class="flex flex-col justify-between p-6 leading-normal w-full">
+          <h5
+            class="mb-2 text-2xl font-bold text-center tracking-tight text-green-900 dark:text-green-200"
+          >
+            {{ item.title }}
+          </h5>
+          <p
+            class="mb-3 font-normal text-gray-700 dark:text-gray-300 text-justify"
+          >
+            {{ item.description }}
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
 </div>

@@ -3,13 +3,19 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'MyProfile',
-    loadChildren:()=> import('./public/public.module').then(m => m.PublicModule)
-  }
+    path: 'my-profile',
+    loadChildren: () =>
+      import('./public/public.module').then((m) => m.PublicModule),
+  },
+  {
+    path: '',
+    redirectTo: 'my-profile',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

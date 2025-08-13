@@ -9,3 +9,9 @@
 *{
    font-family:'Times New Roman', Times, serif;
 }
+
+.flc-prefsEditor-separatedPanel{
+   position: sticky;
+    top: 0;
+    z-index: 100;
+}

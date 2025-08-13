@@ -17,6 +17,9 @@ const routes: Routes = [
       {
         path:'certificates',
         loadComponent: () => import('./pages/certification/certification.component').then(m => m.CertificationComponent)
+      },{
+        path: 'projects',
+        loadComponent: () => import('./pages/personal-project/personal-project.component').then(m => m.PersonalProjectComponent)
       }
     ]
   }
