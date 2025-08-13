@@ -15,7 +15,7 @@ export class MenuPublicComponent implements OnInit {
     this.links = [
       {
         title: 'Inicio',
-        url: '/MyProfile',
+        url: '/',
         svg: this.sanitizer
           .bypassSecurityTrustHtml(` <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l9-9 9 9v8a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
@@ -23,7 +23,7 @@ export class MenuPublicComponent implements OnInit {
       },
       {
         title: 'Trabajos',
-        url: 'MyProfile/experience',
+        url: '/experience',
         svg: this.sanitizer
           .bypassSecurityTrustHtml(` <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <rect x="3" y="7" width="18" height="13" rx="2" />
@@ -32,7 +32,7 @@ export class MenuPublicComponent implements OnInit {
       },
       {
         title: 'Certificaciones',
-        url: 'MyProfile/certificates',
+        url: '/certificates',
         svg: this.sanitizer
           .bypassSecurityTrustHtml(` <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <circle cx="12" cy="8" r="6" />
@@ -41,7 +41,7 @@ export class MenuPublicComponent implements OnInit {
       },
       {
         title: 'Proyectos',
-        url: 'MyProfile/projects',
+        url: '/projects',
         svg: this.sanitizer
           .bypassSecurityTrustHtml(` <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <circle cx="12" cy="8" r="6" />
