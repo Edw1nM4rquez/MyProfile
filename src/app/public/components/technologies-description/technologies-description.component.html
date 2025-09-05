@@ -1,35 +1,84 @@
-<div class="tegnologies-plus relative bg-gradient-to-br from-blue-400 via-indigo-400 to-purple-400 overflow-hidden min-h-screen">
-    <!-- Curved Top SVG -->
-    <svg class="absolute top-0 left-0 w-full h-24" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill="#6366f1" fill-opacity="0.3" d="M0,32 C480,80 960,0 1440,48 L1440,0 L0,0 Z"></path>
-    </svg>
-
-    <div class="relative z-10">
-        <h2 class="font-bold lg:text-3xl text-2xl text-center lg:mb-10 mt-10 mb-5 text-white drop-shadow-lg">
-            Tecnologías y lenguajes de programación más usados
-        </h2>
-        <div class="text-desp px-6 lg:px-20 mb-10 w-full text-left">
-            <p class="lg:ml-20 lg:mr-20 md:m-1 sm:m-0 lg:text-lg md:text-lg sm:text-sm text-xs text-indigo-100">
-                Soy un desarrollador de software altamente motivado y comprometido con 5 años de experiencia en
-                desarrollo web y 2 años de experiencia en el desarrollo de juegos con Unity. Tengo una sólida formación académica
-                en Ingeniería Informática, lo que me ha permitido desarrollar habilidades técnicas y un profundo conocimiento
-                en desarrollo de software.
-            </p>
-            <p class="lg:ml-20 lg:mr-20 md:m-1 sm:m-0 lg:text-lg md:text-lg sm:text-sm text-xs text-purple-100">
-                Dentro de mi experiencia he tratado de usar varias tecnologías, en cada uno de los proyectos para generar
-                un amplio conocimiento y capacidades como desarrollador. He presentado una lista de las tecnologías
-                con las que he podido trabajar.
-            </p>
-        </div>
-        <app-tegnologies></app-tegnologies>
+<div class="technologies-section mb-[2rem] relative bg-gradient-to-br from-blue-400 via-indigo-400 to-purple-400 overflow-hidden min-h-screen">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute -top-4 -left-4 w-72 h-72 bg-white opacity-10 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+        <div class="absolute -bottom-8 -right-4 w-72 h-72 bg-purple-300 opacity-20 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2000"></div>
     </div>
 
-    <!-- Curved Bottom SVG -->
-    <svg class="absolute bottom-0 left-0 w-full h-24" viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill="#6366f1" fill-opacity="0.3" d="M0,48 C480,0 960,80 1440,32 L1440,80 L0,80 Z"></path>
+    <!-- Curved Top SVG with improved design -->
+    <svg class="absolute top-0 left-0 w-full h-32 transform scale-y-150" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="url(#topGradient)" d="M0,32 C480,100 960,0 1440,68 L1440,0 L0,0 Z"></path>
+        <defs>
+            <linearGradient id="topGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.4" />
+                <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.4" />
+            </linearGradient>
+        </defs>
     </svg>
 
+    <!-- Main Content with improved spacing and animations -->
+    <div class="relative z-10 pt-16 pb-20">
+        <!-- Header Section -->
+        <div class="text-center mb-16 animate-fade-in-up">
+            <h2 class="font-bold text-3xl lg:text-5xl text-white drop-shadow-2xl mb-4 tracking-wide">
+                Tecnologías y Lenguajes
+            </h2>
+            <div class="w-24 h-1 bg-white mx-auto rounded-full opacity-80 mb-6"></div>
+            <p class="text-lg lg:text-xl text-indigo-100 font-light max-w-2xl mx-auto px-4">
+                de Programación más Utilizados
+            </p>
+        </div>
+
+        <!-- Description Section with Cards -->
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 mb-16">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center mb-4">
+                        <div class="w-3 h-3 bg-blue-300 rounded-full mr-3"></div>
+                        <h3 class="text-xl font-semibold text-white">Experiencia</h3>
+                    </div>
+                    <p class="text-indigo-100 leading-relaxed text-base lg:text-lg">
+                        Desarrollador de software con <strong class="text-white">5 años de experiencia</strong> en 
+                        desarrollo web y <strong class="text-white">2 años en Unity</strong>. Formación académica 
+                        en Ingeniería Informática con enfoque en soluciones innovadoras.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center mb-4">
+                        <div class="w-3 h-3 bg-purple-300 rounded-full mr-3"></div>
+                        <h3 class="text-xl font-semibold text-white">Tecnologías</h3>
+                    </div>
+                    <p class="text-purple-100 leading-relaxed text-base lg:text-lg">
+                        Amplio conocimiento en <strong class="text-white">múltiples tecnologías</strong>, 
+                        aplicando las mejores prácticas en cada proyecto para garantizar 
+                        soluciones robustas y escalables.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technologies Component -->
+        <div class="animate-fade-in-up animation-delay-500">
+            <app-tegnologies></app-tegnologies>
+        </div>
+    </div>
+
+    <!-- Improved Curved Bottom SVG -->
+    <svg class="absolute bottom-0 left-0 w-full h-32 transform scale-y-150" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="url(#bottomGradient)" d="M0,68 C480,0 960,120 1440,52 L1440,120 L0,120 Z"></path>
+        <defs>
+            <linearGradient id="bottomGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.4" />
+                <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.4" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- Decorative Triangle (if needed) -->
     <div class="container-triangle flex content-end justify-end relative z-10">
-        <div class="triangulo"></div>
+        <div class="triangulo opacity-70 hover:opacity-100 transition-opacity duration-300"></div>
     </div>
 </div>

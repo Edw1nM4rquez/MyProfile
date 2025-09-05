@@ -1,81 +1,65 @@
-<div
-  class="relative flex items-center justify-center min-h-[80vh] bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 overflow-hidden"
->
-  <!-- Decorative Curved SVG Top -->
-  <svg class="absolute top-0 left-0 w-full h-32" viewBox="0 0 1440 320">
-    <path
-      fill="#a5b4fc"
-      fill-opacity="0.4"
-      d="M0,96L80,122.7C160,149,320,203,480,218.7C640,235,800,213,960,186.7C1120,160,1280,128,1360,112L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
-    ></path>
-  </svg>
+<div class="min-h-screen bg-white flex items-center justify-center p-4">
+  <div class="max-w-4xl w-full">
+    <!-- Profile Section -->
+    <div class="text-center mb-16">
+      <!-- Profile Image -->
+      <div class="relative inline-block mb-8">
+        <img
+          src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=256&q=80"
+          alt="Perfil profesional"
+          class="w-32 h-32 rounded-full mx-auto object-cover shadow-2xl"
+        />
+        <div class="absolute inset-0 rounded-full border-2 border-gray-100"></div>
+      </div>
 
-  <div
-    class="relative z-10 bg-white/80 backdrop-blur-lg shadow-2xl rounded-3xl border border-gray-200 p-8 lg:w-[55%] md:w-[90%] sm:w-[98%] mx-auto flex flex-col items-center"
-  >
-    <!-- Profile Image -->
-    <img
-      src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=256&q=80"
-      alt="Perfil"
-      class="w-28 h-28 rounded-full border-4 border-indigo-300 shadow-lg mb-4 object-cover"
-    />
+      <!-- Name & Title -->
+      <h1 class="text-4xl md:text-5xl font-light text-gray-900 mb-4 tracking-tight">
+        Ingeniero en Ciencias de la Computación
+      </h1>
+      <div class="w-16 h-px bg-gray-400 mx-auto mb-4"></div>
+      <h2 class="text-xl text-gray-600 font-light mb-8">
+        Desarrollador Web Full Stack
+      </h2>
+    </div>
 
-    <h2
-      class="text-4xl font-extrabold text-indigo-700 text-center mb-2 drop-shadow-lg"
-    >
-      Ingeniero en Ciencias de la Computación
-    </h2>
-    <h3 class="text-lg font-semibold text-gray-700 text-center mb-6">
-      Desarrollador Web | Apasionado por la innovación
-    </h3>
-
-    <div
-      class="text-gray-800 font-serif text-base lg:text-lg text-center space-y-4"
-    >
-      <p>
-        ¡Bienvenido a mi portafolio digital! Aquí encontrarás una selección de
-        mis proyectos más destacados, donde combino creatividad, tecnología y
-        funcionalidad para crear soluciones web sorprendentes.
+    <!-- Description -->
+    <div class="max-w-3xl mx-auto text-center space-y-8 mb-16">
+      <p class="text-lg text-gray-700 leading-relaxed font-light">
+        Bienvenido a mi portafolio digital. Combino creatividad, tecnología y funcionalidad 
+        para crear soluciones web elegantes y efectivas.
       </p>
-      <p>
-        Mi experiencia abarca desde el desarrollo frontend moderno con Angular,
-        React y Tailwind, hasta la implementación de arquitecturas backend
-        escalables. Me especializo en crear interfaces intuitivas, seguras y
-        optimizadas para la mejor experiencia de usuario.
-      </p>
-      <p>
-        He colaborado con empresas líderes, aportando innovación y eficiencia en
-        cada etapa del desarrollo. Mi objetivo es superar expectativas y
-        transformar ideas en productos digitales de alto impacto.
-      </p>
-      <p>
-        Explora mi portafolio y descubre cómo puedo aportar valor a tu empresa
-        con mi conocimiento y pasión por la tecnología.
+      
+      <p class="text-gray-600 leading-relaxed">
+        Mi experiencia abarca desde el desarrollo frontend moderno hasta la implementación 
+        de arquitecturas backend escalables. Me especializo en crear interfaces intuitivas y optimizadas.
       </p>
     </div>
 
-    <a
-      href="#proyectos"
-      class="mt-8 inline-block px-8 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-bold rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
-    >
-      Ver Proyectos Destacados
-    </a>
+    <!-- Action Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+      <a
+        href="#proyectos"
+        class="px-8 py-3 bg-gray-900 text-white font-medium rounded-sm hover:bg-gray-800 transition-colors duration-300 min-w-[160px] text-center"
+      >
+        Ver Proyectos
+      </a>
+      <a
+        href="#contacto"
+        class="px-8 py-3 border border-gray-300 text-gray-700 font-medium rounded-sm hover:border-gray-400 hover:bg-gray-50 transition-all duration-300 min-w-[160px] text-center"
+      >
+        Contactar
+      </a>
+    </div>
+
+    <!-- Skills -->
+    <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
+      <span class="hover:text-gray-900 transition-colors duration-200 cursor-default">Angular</span>
+      <span class="text-gray-300">•</span>
+      <span class="hover:text-gray-900 transition-colors duration-200 cursor-default">React</span>
+      <span class="text-gray-300">•</span>
+      <span class="hover:text-gray-900 transition-colors duration-200 cursor-default">Tailwind CSS</span>
+      <span class="text-gray-300">•</span>
+      <span class="hover:text-gray-900 transition-colors duration-200 cursor-default">Node.js</span>
+    </div>
   </div>
-
-  <!-- Decorative Curved SVG Bottom -->
-  <svg class="absolute bottom-0 left-0 w-full h-32" viewBox="0 0 1440 320">
-    <path
-      fill="#f472b6"
-      fill-opacity="0.3"
-      d="M0,224L80,218.7C160,213,320,203,480,186.7C640,171,800,149,960,154.7C1120,160,1280,192,1360,208L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-    ></path>
-  </svg>
-
-  <!-- Decorative Lines -->
-  <div
-    class="absolute left-10 top-1/3 w-32 h-32 rounded-full bg-gradient-to-tr from-indigo-200 to-pink-200 opacity-40 blur-2xl"
-  ></div>
-  <div
-    class="absolute right-10 bottom-1/4 w-24 h-24 rounded-full bg-gradient-to-tr from-purple-200 to-blue-200 opacity-30 blur-2xl"
-  ></div>
 </div>

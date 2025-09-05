@@ -1,32 +1,85 @@
-<div class="bg-gradient-to-br from-black via-gray-900 to-gray-800 min-h-[80vh] lg:grid lg:grid-cols-2 grid">
+<div class="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 min-h-[80vh] lg:grid lg:grid-cols-2 grid relative overflow-hidden">
+    <!-- Background Animation -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+        <div class="absolute top-20 right-10 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2000"></div>
+        <div class="absolute bottom-20 left-20 w-80 h-80 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4000"></div>
+    </div>
+
     <!-- Left Column -->
-    <div class="flex items-center justify-center relative px-6 py-10">
-        <div class="max-w-xl w-full">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white text-center mb-4 drop-shadow-lg">
-                ¡Hola! Soy <span class="text-indigo-400">Edwin Marquez</span>
-            </h2>
-            <h3 class="text-2xl md:text-3xl lg:text-4xl text-indigo-200 text-center mb-6 font-semibold">
-                Desarrollador de Software
-            </h3>
+    <div class="flex items-center justify-center relative px-6 py-10 z-10">
+        <div class="max-w-xl w-full space-y-6 animate-fade-in-up">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2 leading-tight">
+                    ¡Hola! 👋
+                </h1>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-4">
+                    Soy Edwin Márquez
+                </h2>
+                <h3 class="text-xl md:text-2xl lg:text-3xl text-blue-200 font-medium mb-6">
+                    💻 Desarrollador de Software
+                </h3>
+            </div>
+
+            <!-- Animated Divider -->
             <div class="flex justify-center mb-8">
-                <hr class="h-1 w-32 bg-indigo-400 border-0 rounded">
+                <div class="h-1 w-32 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full animate-pulse"></div>
             </div>
-            <div class="flex flex-wrap gap-3 justify-center text-center">
-                <span class="px-4 py-2 bg-indigo-600 text-white rounded-full text-sm font-medium shadow">Responsable</span>
-                <span class="px-4 py-2 bg-indigo-600 text-white rounded-full text-sm font-medium shadow">Trabajo en equipo</span>
-                <span class="px-4 py-2 bg-indigo-600 text-white rounded-full text-sm font-medium shadow">Metodologías Ágiles</span>
-                <span class="px-4 py-2 bg-indigo-600 text-white rounded-full text-sm font-medium shadow">Solvente</span>
-                <span class="px-4 py-2 bg-indigo-600 text-white rounded-full text-sm font-medium shadow">Autodidacta</span>
+
+            <!-- Skills Tags with improved spacing and hover effects -->
+            <div class="flex flex-wrap gap-3 justify-center">
+                <span class="px-4 py-2 bg-blue-500/80 backdrop-blur-sm text-white rounded-full text-sm font-medium shadow-lg hover:bg-blue-400 hover:scale-105 transition-all duration-300 cursor-pointer">
+                    ✅ Responsable
+                </span>
+                <span class="px-4 py-2 bg-purple-500/80 backdrop-blur-sm text-white rounded-full text-sm font-medium shadow-lg hover:bg-purple-400 hover:scale-105 transition-all duration-300 cursor-pointer">
+                    🤝 Trabajo en equipo
+                </span>
+                <span class="px-4 py-2 bg-indigo-500/80 backdrop-blur-sm text-white rounded-full text-sm font-medium shadow-lg hover:bg-indigo-400 hover:scale-105 transition-all duration-300 cursor-pointer">
+                    🚀 Metodologías Ágiles
+                </span>
+                <span class="px-4 py-2 bg-blue-600/80 backdrop-blur-sm text-white rounded-full text-sm font-medium shadow-lg hover:bg-blue-500 hover:scale-105 transition-all duration-300 cursor-pointer">
+                    💡 Solvente
+                </span>
+                <span class="px-4 py-2 bg-purple-600/80 backdrop-blur-sm text-white rounded-full text-sm font-medium shadow-lg hover:bg-purple-500 hover:scale-105 transition-all duration-300 cursor-pointer">
+                    📚 Autodidacta
+                </span>
             </div>
-            <p class="mt-8 text-gray-300 text-center text-lg">
-                Apasionado por la tecnología, siempre en busca de nuevos retos y soluciones innovadoras. ¡Bienvenido a mi portafolio!
-            </p>
+
+            <!-- Description with better typography -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <p class="text-gray-200 text-center text-lg leading-relaxed">
+                    🌟 Apasionado por la tecnología, siempre en busca de nuevos retos y soluciones innovadoras. 
+                    <br>
+                    <span class="text-blue-300 font-medium">¡Bienvenido a mi portafolio!</span>
+                </p>
+            </div>
+
+            <!-- Call to Action Button -->
+            <div class="flex justify-center pt-4">
+                <button class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                    📄 Ver mi trabajo
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
     </div>
+
     <!-- Right Column -->
-    <div class="flex items-center justify-center w-full p-8">
-        <img src="https://roa.ups.edu.ec/assets/img/develop3.png"
-                 alt="Imagen Edwin Marquez"
-                 class="w-64 lg:w-80 rounded-xl shadow-2xl border-4 border-indigo-400 object-cover transition-transform duration-300 hover:scale-105">
+    <div class="flex items-center justify-center w-full p-8 z-10">
+        <div class="relative group">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-600 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+            <img src="https://roa.ups.edu.ec/assets/img/develop3.png"
+                 alt="Edwin Márquez - Desarrollador de Software"
+                 class="relative w-64 lg:w-80 rounded-2xl shadow-2xl border-2 border-white/20 object-cover transition-all duration-500 group-hover:scale-105 group-hover:rotate-1">
+            <!-- Floating elements around image -->
+            <div class="absolute -top-4 -right-4 bg-blue-500 text-white p-2 rounded-full shadow-lg animate-bounce">
+                💻
+            </div>
+            <div class="absolute -bottom-4 -left-4 bg-purple-500 text-white p-2 rounded-full shadow-lg animate-bounce animation-delay-1000">
+                🚀
+            </div>
+        </div>
     </div>
 </div>

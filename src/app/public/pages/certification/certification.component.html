@@ -1,70 +1,203 @@
 <div
-  class="relative bg-gradient-to-br from-blue-100 via-slate-50 to-blue-200 w-full pb-12 pt-2 overflow-hidden"
+  class="relative bg-gradient-to-br from-blue-50 via-white to-indigo-100 w-full pb-16 pt-6 overflow-hidden min-h-screen"
 >
-  <!-- Modelo decorativo con curvas animadas -->
-  <svg
-    class="absolute top-0 left-0 w-full h-32 animate-pulse"
-    viewBox="0 0 1440 320"
-  >
-    <path
-      fill="#3b82f6"
-      fill-opacity="0.2"
-      d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,154.7C672,128,768,96,864,117.3C960,139,1056,213,1152,229.3C1248,245,1344,203,1392,181.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-    ></path>
-  </svg>
-  <div class="title text-center mt-10">
-    <h2 class="text-black font-bold text-3xl md:text-4xl mb-2 tracking-tight">
-      CERTIFICACIONES
-    </h2>
-    <p
-      class="text-gray-700 max-w-xl mx-auto text-lg md:text-xl mb-8 animate-fade-in"
-    >
-      Descubre mis certificaciones profesionales, cada una representa un logro y
-      compromiso con la excelencia en tecnología y desarrollo.
-    </p>
+  <!-- Elementos decorativos de fondo -->
+  <div class="absolute inset-0 opacity-30">
+    <div class="absolute top-20 left-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+    <div class="absolute top-40 right-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+    <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
   </div>
-  <div
-    class="container-certificates grid md:grid-cols-2 lg:grid-cols-4 gap-6 px-4"
+
+  <!-- Modelo decorativo con curvas animadas mejoradas -->
+  <svg
+    class="absolute top-0 left-0 w-full h-40 opacity-60"
+    viewBox="0 0 1440 320"
+    preserveAspectRatio="none"
   >
-    <div
-      *ngFor="let item of arrayCertificate"
-      class="group w-full max-w-sm bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700 overflow-hidden animate-fade-in-up"
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3" />
+        <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:0.2" />
+        <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.3" />
+      </linearGradient>
+    </defs>
+    <path
+      fill="url(#grad1)"
+      d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,154.7C672,128,768,96,864,117.3C960,139,1056,213,1152,229.3C1248,245,1344,203,1392,181.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
     >
-      <a href="{{ item.urlCertificate }}" target="_blank" rel="noopener">
-        <img
-          class="p-6 rounded-t-2xl scale-100 group-hover:scale-105 transition-transform duration-300"
-          src="{{ item.urlImageReference }}"
-          alt="Certificado"
-        />
-      </a>
-      <div class="px-6 pb-6">
-        <a href="{{ item.urlCertificate }}" target="_blank" rel="noopener">
-          <h5
-            class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white mb-2"
-          >
-            {{ item.descriptionCertificate }}
-          </h5>
+      <animate attributeName="d" dur="8s" repeatCount="indefinite"
+        values="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,154.7C672,128,768,96,864,117.3C960,139,1056,213,1152,229.3C1248,245,1344,203,1392,181.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z;
+                M0,160L48,150.7C96,141,192,123,288,132.7C384,143,480,181,576,174.7C672,168,768,116,864,107.3C960,99,1056,133,1152,149.3C1248,165,1344,163,1392,161.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z;
+                M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,154.7C672,128,768,96,864,117.3C960,139,1056,213,1152,229.3C1248,245,1344,203,1392,181.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z" />
+    </path>
+  </svg>
+
+  <!-- Contenido principal con mejor espaciado -->
+  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header mejorado -->
+    <div class="text-center mt-16 mb-16">
+      <div class="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6">
+        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        Logros Profesionales
+      </div>
+      
+      <h1 class="text-gray-900 font-bold text-4xl md:text-5xl lg:text-6xl mb-6 tracking-tight">
+        Mis <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Certificaciones</span>
+      </h1>
+      
+      <p class="text-gray-600 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed mb-8">
+        Cada certificación representa un hito en mi desarrollo profesional y mi compromiso 
+        continuo con la excelencia en tecnología y mejores prácticas de desarrollo.
+      </p>
+
+      <!-- Estadísticas -->
+      <div class="flex justify-center items-center space-x-8 mt-8">
+        <div class="text-center">
+          <div class="text-2xl font-bold text-blue-600">{{ arrayCertificate?.length || 0 }}</div>
+          <div class="text-sm text-gray-500">Certificaciones</div>
+        </div>
+        <div class="w-px h-12 bg-gray-300"></div>
+        <div class="text-center">
+          <div class="text-2xl font-bold text-purple-600">100%</div>
+          <div class="text-sm text-gray-500">Verificadas</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid de certificaciones mejorado -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <div
+        *ngFor="let item of arrayCertificate; let i = index"
+        class="group relative bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2"
+        [class.animate-fade-in-up]="true"
+        [style.animation-delay]="i * 150 + 'ms'"
+      >
+        <!-- Badge de verificación -->
+        <div class="absolute top-4 right-4 z-10">
+          <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Imagen del certificado -->
+        <a href="{{ item.urlCertificate }}" target="_blank" rel="noopener" class="block">
+          <div class="relative overflow-hidden rounded-t-3xl">
+            <img
+              class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
+              [src]="item.urlImageReference"
+              [alt]="item.descriptionCertificate"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
         </a>
-        <!--<p class="text-gray-500 text-sm mb-4">{{item.shortDescription}}</p>-->
-        <div class="flex items-center justify-between">
+
+        <!-- Contenido de la tarjeta -->
+        <div class="p-6">
+          <a href="{{ item.urlCertificate }}" target="_blank" rel="noopener">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors duration-300">
+              {{ item.descriptionCertificate }}
+            </h3>
+          </a>
+
+          <!-- Información adicional -->
+          <div class="flex items-center text-sm text-gray-500 mb-4">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+            </svg>
+            Certificación Oficial
+          </div>
+
+          <!-- Botón de acción mejorado -->
           <a
             href="{{ item.urlCertificate }}"
             target="_blank"
             rel="noopener"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors duration-300"
+            class="inline-flex items-center justify-center w-full px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl hover:from-blue-700 hover:to-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none transition-all duration-300 group-hover:shadow-lg"
           >
-            Ver certificado
+            <span>Ver Certificado</span>
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
           </a>
         </div>
       </div>
     </div>
+
+    <!-- Mensaje cuando no hay certificaciones -->
+    <div *ngIf="!arrayCertificate || arrayCertificate.length === 0" 
+         class="text-center py-16">
+      <div class="w-24 h-24 mx-auto mb-6 text-gray-400">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">No hay certificaciones disponibles</h3>
+      <p class="text-gray-500">Las certificaciones aparecerán aquí cuando estén disponibles.</p>
+    </div>
   </div>
-  <!-- Curva decorativa inferior -->
-  <svg class="absolute bottom-0 left-0 w-full h-24" viewBox="0 0 1440 320">
+
+  <!-- Curva decorativa inferior mejorada -->
+  <svg class="absolute bottom-0 left-0 w-full h-32 opacity-40" viewBox="0 0 1440 320" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.2" />
+        <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:0.3" />
+        <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.2" />
+      </linearGradient>
+    </defs>
     <path
-      fill="#3b82f6"
-      fill-opacity="0.15"
+      fill="url(#grad2)"
       d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,154.7C672,160,768,192,864,186.7C960,181,1056,139,1152,117.3C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-    ></path>
+    />
   </svg>
 </div>
+
+<!-- Estilos CSS adicionales para mejorar las animaciones -->
+<style>
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+</style>
