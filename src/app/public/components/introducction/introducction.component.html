@@ -53,10 +53,10 @@
 
           <!-- Action Buttons -->
           <div class="flex flex-col sm:flex-row gap-4 pt-6">
-            <button class="bg-gray-900 text-white px-8 py-4 rounded-sm font-medium text-sm uppercase tracking-wide hover:bg-gray-800 transition-colors duration-300">
+            <button (click)="goToWorkSection()" class="bg-gray-900 text-white px-8 py-4 rounded-sm font-medium text-sm uppercase tracking-wide hover:bg-gray-800 transition-colors duration-300">
               Ver mi trabajo
             </button>
-            <button class="border border-gray-300 text-gray-700 px-8 py-4 rounded-sm font-medium text-sm uppercase tracking-wide hover:border-gray-400 hover:bg-gray-50 transition-all duration-300">
+            <button (click)="downloadCV()" class="border border-gray-300 text-gray-700 px-8 py-4 rounded-sm font-medium text-sm uppercase tracking-wide hover:border-gray-400 hover:bg-gray-50 transition-all duration-300">
               Descargar CV
             </button>
           </div>
