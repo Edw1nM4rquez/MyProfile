@@ -14,7 +14,7 @@ export class ContactSectionComponent {
     email: 'edwi1999@hotmail.com',
     //phone: '+593 123 456 789',
     location: 'Ecuador - Azogues',
-    linkedin: 'https://linkedin.com/in/edwin-marquez',
+    linkedin: 'https://linkedin.com/in/edwinfernandomarquez',
     github: 'https://github.com/Edw1nM4rquez'
   };
 
