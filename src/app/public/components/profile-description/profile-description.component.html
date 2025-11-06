@@ -1,65 +1,156 @@
-<div class="min-h-screen bg-white flex items-center justify-center p-4">
-  <div class="max-w-4xl w-full">
-    <!-- Profile Section -->
-    <div class="text-center mb-16">
-      <!-- Profile Image -->
-      <div class="relative inline-block mb-8">
-        <img
-          src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=256&q=80"
-          alt="Perfil profesional"
-          class="w-32 h-32 rounded-full mx-auto object-cover shadow-2xl"
-        />
-        <div class="absolute inset-0 rounded-full border-2 border-gray-100"></div>
+<!-- About Section - Elegant Clean White Design -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6 lg:px-12">
+    <div class="grid lg:grid-cols-12 gap-16 items-start">
+      
+      <!-- Left Content -->
+      <div class="lg:col-span-7 space-y-12">
+        <!-- Section Header -->
+        <div class="space-y-6">
+          <p class="text-sm text-gray-600 uppercase tracking-wider font-medium">About</p>
+          <h2 class="text-4xl lg:text-5xl font-light text-gray-900 leading-tight tracking-tight">
+            CREATING DIGITAL
+            <span class="block">EXPERIENCES</span>
+          </h2>
+          <div class="w-16 h-px bg-gray-400"></div>
+        </div>
+
+        <!-- Description -->
+        <div class="space-y-8 text-gray-700 leading-relaxed">
+          <p class="text-lg">
+            Como Ingeniero en Ciencias de la Computación, me especializo en el desarrollo 
+            de soluciones web full-stack que combinan funcionalidad robusta con diseño elegante. 
+            Mi enfoque se centra en crear experiencias digitales que no solo cumplan con los 
+            requisitos técnicos, sino que también proporcionen valor real a los usuarios.
+          </p>
+          
+          <p>
+            Con más de 3 años de experiencia en el desarrollo de aplicaciones web modernas, 
+            he trabajado con tecnologías como Angular, React, Node.js y diversas bases de datos. 
+            Mi pasión por el aprendizaje continuo me mantiene actualizado con las últimas tendencias 
+            y mejores prácticas de la industria.
+          </p>
+          
+          <p>
+            Trabajo con metodologías ágiles y mantengo un enfoque centrado en el usuario, 
+            asegurando que cada proyecto no solo sea técnicamente sólido, sino también 
+            accesible e intuitivo para todos los usuarios.
+          </p>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="space-y-8">
+          <h3 class="text-lg font-medium text-gray-900">Technical Expertise</h3>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Frontend -->
+            <div class="space-y-4">
+              <h4 class="text-sm text-gray-500 uppercase tracking-wider font-medium">Frontend Development</h4>
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-gray-700">Angular & React</span>
+                  <span class="text-sm text-gray-500">Expert</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-gray-700">TypeScript & JavaScript</span>
+                  <span class="text-sm text-gray-500">Expert</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-gray-700">CSS & Tailwind</span>
+                  <span class="text-sm text-gray-500">Advanced</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Backend -->
+            <div class="space-y-4">
+              <h4 class="text-sm text-gray-500 uppercase tracking-wider font-medium">Backend Development</h4>
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-gray-700">Node.js & Express</span>
+                  <span class="text-sm text-gray-500">Advanced</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-gray-700">Python & Django</span>
+                  <span class="text-sm text-gray-500">Intermediate</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-gray-700">MongoDB & PostgreSQL</span>
+                  <span class="text-sm text-gray-500">Advanced</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Button -->
+        <div>
+          <button class="bg-gray-900 text-white px-8 py-4 rounded-sm font-medium text-sm uppercase tracking-wide hover:bg-gray-800 transition-colors duration-300">
+            Download Resume
+          </button>
+        </div>
       </div>
 
-      <!-- Name & Title -->
-      <h1 class="text-4xl md:text-5xl font-light text-gray-900 mb-4 tracking-tight">
-        Ingeniero en Ciencias de la Computación
-      </h1>
-      <div class="w-16 h-px bg-gray-400 mx-auto mb-4"></div>
-      <h2 class="text-xl text-gray-600 font-light mb-8">
-        Desarrollador Web Full Stack
-      </h2>
-    </div>
+      <!-- Right Content - Image & Stats -->
+      <div class="lg:col-span-5 space-y-8">
+        <!-- Profile Image -->
+        <div class="relative">
+          <div class="aspect-[4/5] bg-gray-200 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=600&q=80"
+              alt="Edwin Márquez - Perfil profesional"
+              class="w-full h-full object-cover hover:scale-105 transition-all duration-700"
+            />
+          </div>
+        </div>
 
-    <!-- Description -->
-    <div class="max-w-3xl mx-auto text-center space-y-8 mb-16">
-      <p class="text-lg text-gray-700 leading-relaxed font-light">
-        Bienvenido a mi portafolio digital. Combino creatividad, tecnología y funcionalidad 
-        para crear soluciones web elegantes y efectivas.
-      </p>
-      
-      <p class="text-gray-600 leading-relaxed">
-        Mi experiencia abarca desde el desarrollo frontend moderno hasta la implementación 
-        de arquitecturas backend escalables. Me especializo en crear interfaces intuitivas y optimizadas.
-      </p>
-    </div>
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-2 gap-6">
+          <!-- Stat 1 -->
+          <div class="bg-white p-6 border border-gray-200">
+            <div class="space-y-2">
+              <p class="text-3xl font-light text-gray-900">20+</p>
+              <p class="text-sm text-gray-500 uppercase tracking-wider">Projects Completed</p>
+            </div>
+          </div>
+          
+          <!-- Stat 2 -->
+          <div class="bg-gray-900 p-6 text-white">
+            <div class="space-y-2">
+              <p class="text-3xl font-light">3+</p>
+              <p class="text-sm text-gray-300 uppercase tracking-wider">Years Experience</p>
+            </div>
+          </div>
+          
+          <!-- Stat 3 -->
+          <div class="bg-white p-6 border border-gray-200">
+            <div class="space-y-2">
+              <p class="text-3xl font-light text-gray-900">100%</p>
+              <p class="text-sm text-gray-500 uppercase tracking-wider">Client Satisfaction</p>
+            </div>
+          </div>
+          
+          <!-- Stat 4 -->
+          <div class="bg-white p-6 border border-gray-200">
+            <div class="space-y-2">
+              <p class="text-3xl font-light text-gray-900">24/7</p>
+              <p class="text-sm text-gray-500 uppercase tracking-wider">Support Available</p>
+            </div>
+          </div>
+        </div>
 
-    <!-- Action Buttons -->
-    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-      <a
-        href="#proyectos"
-        class="px-8 py-3 bg-gray-900 text-white font-medium rounded-sm hover:bg-gray-800 transition-colors duration-300 min-w-[160px] text-center"
-      >
-        Ver Proyectos
-      </a>
-      <a
-        href="#contacto"
-        class="px-8 py-3 border border-gray-300 text-gray-700 font-medium rounded-sm hover:border-gray-400 hover:bg-gray-50 transition-all duration-300 min-w-[160px] text-center"
-      >
-        Contactar
-      </a>
-    </div>
-
-    <!-- Skills -->
-    <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
-      <span class="hover:text-gray-900 transition-colors duration-200 cursor-default">Angular</span>
-      <span class="text-gray-300">•</span>
-      <span class="hover:text-gray-900 transition-colors duration-200 cursor-default">React</span>
-      <span class="text-gray-300">•</span>
-      <span class="hover:text-gray-900 transition-colors duration-200 cursor-default">Tailwind CSS</span>
-      <span class="text-gray-300">•</span>
-      <span class="hover:text-gray-900 transition-colors duration-200 cursor-default">Node.js</span>
+        <!-- Quote -->
+        <div class="bg-white p-8 border border-gray-200">
+          <blockquote class="space-y-4">
+            <p class="text-gray-600 leading-relaxed italic">
+              "La tecnología al servicio de las personas, creando soluciones que realmente importen."
+            </p>
+            <footer class="text-sm text-gray-500 uppercase tracking-wider">
+              — Edwin Márquez
+            </footer>
+          </blockquote>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>

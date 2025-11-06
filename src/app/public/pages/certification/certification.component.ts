@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import Certificate from 'src/app/core/interfaces/Certificate';
 
 @Component({
@@ -10,6 +10,8 @@ import Certificate from 'src/app/core/interfaces/Certificate';
   imports: [CommonModule],
 })
 export class CertificationComponent {
+  @Input() isPreview: boolean = false;
+  
   public arrayCertificate: Certificate[] = [];
   private udemyUrlImage =
     'https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg';
@@ -18,6 +20,15 @@ export class CertificationComponent {
   private uahUrlImage =
     'https://www.uah.es/export/sites/uah/.galleries/imagenes-estructura/logo1.png_105938625.png';
   private upsUrlImage = '';
+
+  get displayedCertificates() {
+    return this.isPreview ? this.arrayCertificate.slice(0, 4) : this.arrayCertificate;
+  }
+
+  openCertificate(url: string) {
+    window.open(url, '_blank');
+  }
+
   constructor() {
     this.arrayCertificate = [
       {

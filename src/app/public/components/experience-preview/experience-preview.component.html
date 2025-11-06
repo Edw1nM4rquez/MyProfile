@@ -1,0 +1,163 @@
+<!-- Experience Section - Clean & Professional Design -->
+<section [class]="isPreview ? 'py-20 bg-white' : 'py-20 bg-gray-50 min-h-screen'">
+  <div class="container mx-auto px-6 lg:px-12">
+    
+    <!-- Header - Different for preview vs full page -->
+    <div class="text-center mb-16" *ngIf="!isPreview">
+      <div class="space-y-6">
+        <div class="inline-flex items-center px-4 py-2 bg-white rounded-sm border border-gray-200">
+          <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+          <span class="text-sm text-gray-600 font-medium uppercase tracking-wider">Professional Journey</span>
+        </div>
+        
+        <h1 class="text-5xl lg:text-7xl font-light text-gray-900 leading-tight tracking-tight">
+          EXPERIENCE
+        </h1>
+        
+        <div class="w-24 h-px bg-gray-400 mx-auto mt-8"></div>
+        
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Mi trayectoria profesional refleja un compromiso constante con la innovación tecnológica 
+          y el desarrollo de soluciones que impactan positivamente en la sociedad.
+        </p>
+      </div>
+    </div>
+
+    <!-- Preview Header -->
+    <div class="text-center mb-16" *ngIf="isPreview">
+      <div class="space-y-4">
+        <p class="text-sm text-gray-500 uppercase tracking-wider font-medium">Professional Journey</p>
+        <h2 class="text-4xl lg:text-6xl font-light text-gray-900 tracking-tight">
+          EXPERIENCE
+        </h2>
+        <div class="w-16 h-px bg-gray-300 mx-auto mt-8"></div>
+      </div>
+    </div>
+
+    <!-- Experience Timeline -->
+    <div class="relative">
+      <!-- Timeline Line - Only for full view -->
+      <div class="absolute left-8 top-0 bottom-0 w-px bg-gray-200" *ngIf="!isPreview"></div>
+      
+      <!-- Experience Items -->
+      <div class="space-y-12">
+        <div *ngFor="let experience of displayedExperience; let i = index" 
+             class="group relative"
+             [style.animation-delay]="i * 200 + 'ms'">
+          
+          <!-- Timeline Dot - Only for full view -->
+          <div class="absolute left-6 top-8 w-4 h-4 bg-blue-500 rounded-full border-4 border-white shadow-lg z-10" 
+               *ngIf="!isPreview"></div>
+          
+          <!-- Experience Card -->
+          <div [class]="isPreview ? 'bg-gray-50 p-8 rounded-sm border border-gray-200 hover:border-gray-300 transition-all duration-300 hover:shadow-lg' : 'ml-20 bg-white p-8 rounded-sm border border-gray-200 hover:border-gray-300 transition-all duration-300 hover:shadow-lg'">
+            
+            <!-- Header -->
+            <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+              <div class="flex-1">
+                <h3 class="text-xl font-medium text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
+                  {{ experience.title }}
+                </h3>
+                <div class="flex items-center text-sm text-gray-500 mb-4">
+                  <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                          d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0v1a3 3 0 006 0V7m-6 0H6a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V9a2 2 0 00-2-2h-2m-6 0V7"></path>
+                  </svg>
+                  {{ experience.date }}
+                </div>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p class="text-gray-700 leading-relaxed mb-6">
+              {{ experience.description }}
+            </p>
+
+            <!-- Action -->
+            <div class="flex items-center">
+              <button 
+                (click)="openExperience(experience.urlDomain)"
+                class="inline-flex items-center text-sm text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
+                <span>Ver proyecto</span>
+                <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" 
+                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Preview Stats & CTA - Only for preview mode -->
+    <div *ngIf="isPreview">
+      <!-- Stats Row -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 py-12 border-t border-gray-200 mt-16">
+        <div class="text-center">
+          <p class="text-3xl font-light text-gray-900">{{ arrayExperience.length }}+</p>
+          <p class="text-sm text-gray-500 uppercase tracking-wider mt-2">Projects</p>
+        </div>
+        <div class="text-center">
+          <p class="text-3xl font-light text-gray-900">5+</p>
+          <p class="text-sm text-gray-500 uppercase tracking-wider mt-2">Years</p>
+        </div>
+        <div class="text-center">
+          <p class="text-3xl font-light text-gray-900">10+</p>
+          <p class="text-sm text-gray-500 uppercase tracking-wider mt-2">Technologies</p>
+        </div>
+        <div class="text-center">
+          <p class="text-3xl font-light text-gray-900">100%</p>
+          <p class="text-sm text-gray-500 uppercase tracking-wider mt-2">Commitment</p>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center">
+        <div class="space-y-6">
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Cada proyecto ha sido una oportunidad de crecimiento, aplicando las mejores prácticas 
+            y tecnologías más actuales para crear soluciones efectivas.
+          </p>
+          <a href="/experience" 
+             class="inline-block bg-gray-900 text-white px-8 py-4 rounded-sm font-medium text-sm uppercase tracking-wide hover:bg-gray-800 transition-colors duration-300">
+            Ver toda mi experiencia
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full Page Call to Action -->
+    <div class="text-center pt-20 border-t border-gray-200 mt-20" 
+         *ngIf="!isPreview && arrayExperience && arrayExperience.length > 0">
+      <div class="space-y-6">
+        <h3 class="text-2xl font-light text-gray-900">Ready to Collaborate</h3>
+        <p class="text-gray-700 max-w-2xl mx-auto">
+          Mi experiencia abarca desde desarrollo frontend y backend hasta proyectos de investigación 
+          e innovación tecnológica. Siempre buscando nuevos desafíos y oportunidades de crecimiento.
+        </p>
+        <a href="/" 
+           class="inline-block bg-gray-900 text-white px-8 py-4 rounded-sm font-medium text-sm uppercase tracking-wide hover:bg-gray-800 transition-colors duration-300">
+          Back to Portfolio
+        </a>
+      </div>
+    </div>
+
+    <!-- No Experience Message -->
+    <ng-template #noExperience>
+      <div class="text-center py-20">
+        <div class="space-y-4">
+          <svg class="w-16 h-16 text-gray-300 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" 
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          <h3 class="text-xl text-gray-500">No experience data available</h3>
+          <p class="text-gray-400">
+            Experience information will be displayed here once available.
+          </p>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</section>

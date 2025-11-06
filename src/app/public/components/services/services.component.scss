@@ -1,0 +1,37 @@
+// Services Component Styles
+.services-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.service-card {
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  
+  &:hover {
+    transform: translateY(-8px) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.service-icon {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .service-card {
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+}
+
+// Animation delays for staggered entrance
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }

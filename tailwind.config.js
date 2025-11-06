@@ -5,11 +5,18 @@ module.exports = {
     "./node_modules/flowbite/**/*.js" // add this line
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'cream': {
+          DEFAULT: '#fafafa',
+          'light': '#ffffff',
+          'dark': '#f5f5f5',
+        }
+      }
+    },
   },
   plugins: [
     require('flowbite/plugin')
-]
-
+  ]
 }
 
