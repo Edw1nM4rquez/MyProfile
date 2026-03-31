@@ -1,9 +1,9 @@
-﻿<!-- Projects Section — Dark Tech Portfolio -->
-<section id="projects" class="bg-[#0B0F19] py-24 relative overflow-hidden">
+﻿<!-- Projects Section — Light Tech Portfolio -->
+<section id="projects" class="bg-gray-50 py-24 relative overflow-hidden">
 
   <!-- Subtle background grid -->
-  <div class="absolute inset-0 opacity-[0.03]"
-    style="background-image: linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px); background-size: 60px 60px;">
+  <div class="absolute inset-0 opacity-[0.4]"
+    style="background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px); background-size: 60px 60px;">
   </div>
 
   <div class="max-w-6xl mx-auto px-6 lg:px-8 relative">
@@ -12,12 +12,12 @@
     <div class="mb-16" appFadeIn>
       <div class="flex items-center gap-3 mb-4">
         <span class="text-blue-400 text-xs font-bold uppercase tracking-widest">{{ lang.t('projects.label') }}</span>
-        <div class="flex-1 h-px bg-gray-800 max-w-16"></div>
+        <div class="flex-1 h-px bg-gray-300 max-w-16"></div>
       </div>
-      <h2 class="text-4xl lg:text-5xl font-bold text-gray-100 tracking-tight mb-4">
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight mb-4">
         {{ lang.t('projects.title') }}
       </h2>
-      <p class="text-gray-400 text-lg max-w-2xl">
+      <p class="text-gray-600 text-lg max-w-2xl">
         {{ lang.t('projects.subtitle') }}
       </p>
     </div>
@@ -27,7 +27,7 @@
       <ng-container *ngFor="let project of projects; let i = index">
         <div
           appFadeIn
-          [class]="'group relative rounded-2xl border bg-gray-900/50 p-7 transition-all duration-300 cursor-default ' + accentClasses[project.accent].border + ' ' + (project.url ? 'cursor-pointer' : '')">
+          [class]="'group relative rounded-2xl border bg-white p-7 transition-all duration-300 shadow-sm hover:shadow-md cursor-default ' + accentClasses[project.accent].border + ' ' + (project.url ? 'cursor-pointer' : '')">
 
           <!-- Top glow -->
           <div [class]="'absolute inset-x-0 top-0 h-px rounded-t-2xl opacity-50 ' + accentClasses[project.accent].glow"></div>
@@ -38,13 +38,13 @@
               <span [class]="'inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3 ' + accentClasses[project.accent].badge">
                 {{ lang.t('projects.' + project.tKey + '_category') }}
               </span>
-              <h3 class="text-xl font-bold text-gray-100 leading-snug group-hover:text-white transition-colors">
+              <h3 class="text-xl font-bold text-gray-900 leading-snug group-hover:text-gray-700 transition-colors">
                 {{ lang.t('projects.' + project.tKey + '_title') }}
               </h3>
             </div>
             <span *ngIf="project.url"
               (click)="openUrl(project.url)"
-              class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg border border-gray-700 text-gray-500 hover:text-gray-200 hover:border-gray-500 transition-all ml-4 cursor-pointer">
+              class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg border border-gray-300 text-gray-400 hover:text-gray-700 hover:border-gray-400 transition-all ml-4 cursor-pointer">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
               </svg>
@@ -61,8 +61,8 @@
                 </svg>
               </div>
               <div>
-                <p class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">{{ lang.t('projects.problem') }}</p>
-                <p class="text-gray-400 text-sm leading-relaxed">{{ lang.t('projects.' + project.tKey + '_problem') }}</p>
+                <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">{{ lang.t('projects.problem') }}</p>
+                <p class="text-gray-600 text-sm leading-relaxed">{{ lang.t('projects.' + project.tKey + '_problem') }}</p>
               </div>
             </div>
 
@@ -74,8 +74,8 @@
                 </svg>
               </div>
               <div>
-                <p class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">{{ lang.t('projects.solution') }}</p>
-                <p class="text-gray-400 text-sm leading-relaxed">{{ lang.t('projects.' + project.tKey + '_solution') }}</p>
+                <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">{{ lang.t('projects.solution') }}</p>
+                <p class="text-gray-600 text-sm leading-relaxed">{{ lang.t('projects.' + project.tKey + '_solution') }}</p>
               </div>
             </div>
 
@@ -87,16 +87,16 @@
                 </svg>
               </div>
               <div>
-                <p class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">{{ lang.t('projects.impact') }}</p>
-                <p class="text-green-400 text-sm font-medium leading-relaxed">{{ lang.t('projects.' + project.tKey + '_impact') }}</p>
+                <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">{{ lang.t('projects.impact') }}</p>
+                <p class="text-green-600 text-sm font-medium leading-relaxed">{{ lang.t('projects.' + project.tKey + '_impact') }}</p>
               </div>
             </div>
           </div>
 
           <!-- Stack chips -->
-          <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800">
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-200">
             <span *ngFor="let tech of project.stack"
-              class="text-xs px-2.5 py-1 rounded-md bg-gray-800 text-gray-400 font-mono border border-gray-700">
+              class="text-xs px-2.5 py-1 rounded-md bg-gray-100 text-gray-600 font-mono border border-gray-200">
               {{ tech }}
             </span>
           </div>

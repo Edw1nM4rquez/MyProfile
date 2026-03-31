@@ -38,19 +38,19 @@ export class CertificationsComponent {
 
   colorClasses: Record<string, { border: string; badge: string; icon: string }> = {
     blue: {
-      border: 'border-blue-800/50 hover:border-blue-600/60',
-      badge: 'bg-blue-500/10 text-blue-400 border border-blue-500/20',
-      icon: 'text-blue-400',
+      border: 'border-blue-200 hover:border-blue-400',
+      badge: 'bg-blue-50 text-blue-600 border border-blue-200',
+      icon: 'text-blue-600',
     },
     green: {
-      border: 'border-green-800/50 hover:border-green-600/60',
-      badge: 'bg-green-500/10 text-green-400 border border-green-500/20',
-      icon: 'text-green-400',
+      border: 'border-green-200 hover:border-green-400',
+      badge: 'bg-green-50 text-green-600 border border-green-200',
+      icon: 'text-green-600',
     },
     purple: {
-      border: 'border-purple-800/50 hover:border-purple-600/60',
-      badge: 'bg-purple-500/10 text-purple-400 border border-purple-500/20',
-      icon: 'text-purple-400',
+      border: 'border-purple-200 hover:border-purple-400',
+      badge: 'bg-purple-50 text-purple-600 border border-purple-200',
+      icon: 'text-purple-600',
     },
   };
 }

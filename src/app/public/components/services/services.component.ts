@@ -16,8 +16,8 @@ export class ServicesComponent {
   stackGroups = [
     {
       labelKey: 'stack.backend',
-      accentClass: 'text-blue-400',
-      borderClass: 'border-blue-500/20 hover:border-blue-500/40',
+      accentClass: 'text-blue-600',
+      borderClass: 'border-blue-200 hover:border-blue-300',
       dotClass: 'bg-blue-500',
       items: [
         { name: 'NestJS', level: 90 },
@@ -30,8 +30,8 @@ export class ServicesComponent {
     },
     {
       labelKey: 'stack.frontend',
-      accentClass: 'text-purple-400',
-      borderClass: 'border-purple-500/20 hover:border-purple-500/40',
+      accentClass: 'text-purple-600',
+      borderClass: 'border-purple-200 hover:border-purple-300',
       dotClass: 'bg-purple-500',
       items: [
         { name: 'Angular 15+', level: 95 },
@@ -44,8 +44,8 @@ export class ServicesComponent {
     },
     {
       labelKey: 'stack.ai',
-      accentClass: 'text-green-400',
-      borderClass: 'border-green-500/20 hover:border-green-500/40',
+      accentClass: 'text-green-600',
+      borderClass: 'border-green-200 hover:border-green-300',
       dotClass: 'bg-green-500',
       items: [
         { name: 'OpenAI API', level: 78 },
@@ -58,8 +58,8 @@ export class ServicesComponent {
     },
     {
       labelKey: 'stack.tools',
-      accentClass: 'text-orange-400',
-      borderClass: 'border-orange-500/20 hover:border-orange-500/40',
+      accentClass: 'text-orange-600',
+      borderClass: 'border-orange-200 hover:border-orange-300',
       dotClass: 'bg-orange-500',
       items: [
         { name: 'Git / GitHub', level: 93 },

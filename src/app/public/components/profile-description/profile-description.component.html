@@ -1,6 +1,6 @@
-﻿<!-- About Section — Dark Tech Portfolio -->
-<section id="about" class="bg-gray-900/30 py-24 relative">
-  <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+﻿<!-- About Section — Light Tech Portfolio -->
+<section id="about" class="bg-white py-24 relative">
+  <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
 
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-16 items-start">
@@ -9,15 +9,15 @@
       <div appFadeIn class="space-y-8">
         <div>
           <div class="flex items-center gap-3 mb-4">
-            <span class="text-blue-400 text-xs font-bold uppercase tracking-widest">{{ lang.t('about.label') }}</span>
-            <div class="h-px bg-gray-800 w-12"></div>
+            <span class="text-blue-600 text-xs font-bold uppercase tracking-widest">{{ lang.t('about.label') }}</span>
+            <div class="h-px bg-gray-200 w-12"></div>
           </div>
-          <h2 class="text-4xl lg:text-5xl font-bold text-gray-100 tracking-tight leading-tight">
+          <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight">
             {{ lang.t('about.title') }}
           </h2>
         </div>
 
-        <div class="space-y-5 text-gray-400 leading-relaxed">
+        <div class="space-y-5 text-gray-600 leading-relaxed">
           <p>{{ lang.t('about.p1') }}</p>
           <p>{{ lang.t('about.p2') }}</p>
           <p>{{ lang.t('about.p3') }}</p>
@@ -25,21 +25,21 @@
 
         <!-- Traits -->
         <div class="space-y-4 pt-2">
-          <div *ngFor="let t of traits" class="flex items-start gap-4 p-4 rounded-xl border border-gray-800 bg-gray-900/50 hover:border-gray-700 transition-colors">
-            <div class="flex-shrink-0 w-9 h-9 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
-              <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div *ngFor="let t of traits" class="flex items-start gap-4 p-4 rounded-xl border border-gray-200 bg-gray-50 hover:border-gray-300 transition-colors">
+              <div class="flex-shrink-0 w-9 h-9 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center">
+                <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" [attr.d]="traitIcons[t]"/>
               </svg>
             </div>
             <div>
-              <h4 class="text-gray-200 font-semibold text-sm mb-1">{{ lang.t('about.' + t) }}</h4>
+              <h4 class="text-gray-800 font-semibold text-sm mb-1">{{ lang.t('about.' + t) }}</h4>
               <p class="text-gray-500 text-sm">{{ lang.t('about.' + t + 'd') }}</p>
             </div>
           </div>
         </div>
 
         <button (click)="downloadCV()"
-          class="inline-flex items-center gap-2.5 px-6 py-3 text-sm font-semibold text-white bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-xl transition-all duration-200">
+          class="inline-flex items-center gap-2.5 px-6 py-3 text-sm font-semibold text-gray-700 bg-white hover:bg-gray-50 border border-gray-300 rounded-xl transition-all duration-200">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
           </svg>
@@ -52,43 +52,43 @@
 
         <!-- Stats grid -->
         <div class="grid grid-cols-3 gap-4">
-          <div class="rounded-2xl border border-gray-800 bg-gray-900/50 p-6 text-center hover:border-blue-500/30 transition-colors">
-            <p class="text-4xl font-bold text-gray-100 mb-1">5<span class="text-blue-400">+</span></p>
+          <div class="rounded-2xl border border-gray-200 bg-gray-50 p-6 text-center hover:border-blue-300 transition-colors">
+            <p class="text-4xl font-bold text-gray-900 mb-1">5<span class="text-blue-600">+</span></p>
             <p class="text-gray-500 text-xs uppercase tracking-widest">{{ lang.t('about.stat_years') }}</p>
           </div>
-          <div class="rounded-2xl border border-gray-800 bg-gray-900/50 p-6 text-center hover:border-purple-500/30 transition-colors">
-            <p class="text-4xl font-bold text-gray-100 mb-1">20<span class="text-purple-400">+</span></p>
+          <div class="rounded-2xl border border-gray-200 bg-gray-50 p-6 text-center hover:border-purple-300 transition-colors">
+            <p class="text-4xl font-bold text-gray-900 mb-1">20<span class="text-purple-600">+</span></p>
             <p class="text-gray-500 text-xs uppercase tracking-widest">{{ lang.t('about.stat_projects') }}</p>
           </div>
-          <div class="rounded-2xl border border-gray-800 bg-gray-900/50 p-6 text-center hover:border-green-500/30 transition-colors">
-            <p class="text-4xl font-bold text-gray-100 mb-1">4<span class="text-green-400">+</span></p>
+          <div class="rounded-2xl border border-gray-200 bg-gray-50 p-6 text-center hover:border-green-300 transition-colors">
+            <p class="text-4xl font-bold text-gray-900 mb-1">5<span class="text-green-600">+</span></p>
             <p class="text-gray-500 text-xs uppercase tracking-widest">{{ lang.t('about.stat_companies') }}</p>
           </div>
         </div>
 
         <!-- Experience list -->
-        <div class="rounded-2xl border border-gray-800 bg-gray-900/50 p-7 space-y-5">
-          <h3 class="text-gray-400 text-xs font-bold uppercase tracking-widest border-b border-gray-800 pb-3">Timeline</h3>
+        <div class="rounded-2xl border border-gray-200 bg-gray-50 p-7 space-y-5">
+          <h3 class="text-gray-500 text-xs font-bold uppercase tracking-widest border-b border-gray-200 pb-3">Timeline</h3>
 
           <div class="space-y-5">
             <div class="flex gap-4">
               <div class="flex flex-col items-center">
                 <div class="w-2 h-2 rounded-full bg-blue-400 mt-1.5 flex-shrink-0"></div>
-                <div class="w-px flex-1 bg-gray-800 mt-1"></div>
+                <div class="w-px flex-1 bg-gray-200 mt-1"></div>
               </div>
               <div class="pb-5">
-                <p class="text-gray-200 font-semibold text-sm">Ecuador Direct Roses — Fullstack</p>
-                <p class="text-gray-500 text-xs mt-0.5">Apr 2024 → present · NestJS, Angular, Power BI</p>
+                <p class="text-gray-800 font-semibold text-sm">Ecuador Direct Roses — Fullstack</p>
+                <p class="text-gray-500 text-xs mt-0.5">Abr 2024 → present · Angular, Django, PostgreSQL, Power BI</p>
               </div>
             </div>
 
             <div class="flex gap-4">
               <div class="flex flex-col items-center">
                 <div class="w-2 h-2 rounded-full bg-purple-400 mt-1.5 flex-shrink-0"></div>
-                <div class="w-px flex-1 bg-gray-800 mt-1"></div>
+                <div class="w-px flex-1 bg-gray-200 mt-1"></div>
               </div>
               <div class="pb-5">
-                <p class="text-gray-200 font-semibold text-sm">Orion Governance — Frontend · USA</p>
+                <p class="text-gray-800 font-semibold text-sm">Orion Governance — Frontend · USA</p>
                 <p class="text-gray-500 text-xs mt-0.5">Oct 2023 – Oct 2024 · React, Testing</p>
               </div>
             </div>
@@ -96,19 +96,30 @@
             <div class="flex gap-4">
               <div class="flex flex-col items-center">
                 <div class="w-2 h-2 rounded-full bg-green-400 mt-1.5 flex-shrink-0"></div>
-                <div class="w-px flex-1 bg-gray-800 mt-1"></div>
+                <div class="w-px flex-1 bg-gray-200 mt-1"></div>
               </div>
               <div class="pb-5">
-                <p class="text-gray-200 font-semibold text-sm">UPS EduTech — Fullstack · EU Research</p>
-                <p class="text-gray-500 text-xs mt-0.5">Apr 2022 – Jan 2024 · Angular, Django, AI/ML</p>
+                <p class="text-gray-800 font-semibold text-sm">UPS EduTech — Fullstack · EU Research</p>
+                <p class="text-gray-500 text-xs mt-0.5">Abr 2022 – Ene 2024 · Angular, Django, Python, AI/ML</p>
               </div>
             </div>
 
             <div class="flex gap-4">
-              <div class="flex-shrink-0 w-2 h-2 rounded-full bg-orange-400 mt-1.5"></div>
-              <div>
-                <p class="text-gray-200 font-semibold text-sm">Quikly Group — Frontend · UK</p>
+              <div class="flex flex-col items-center">
+                <div class="w-2 h-2 rounded-full bg-orange-400 mt-1.5 flex-shrink-0"></div>
+                <div class="w-px flex-1 bg-gray-200 mt-1"></div>
+              </div>
+              <div class="pb-5">
+                <p class="text-gray-800 font-semibold text-sm">Quikly Group — Frontend · UK</p>
                 <p class="text-gray-500 text-xs mt-0.5">Mar 2023 – Jul 2023 · Angular, Ionic</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-2 h-2 rounded-full bg-sky-400 mt-1.5"></div>
+              <div>
+                <p class="text-gray-800 font-semibold text-sm">Optimus — Frontend</p>
+                <p class="text-gray-500 text-xs mt-0.5">Feb 2022 – Dic 2022 · Angular, Facturación electrónica</p>
               </div>
             </div>
           </div>

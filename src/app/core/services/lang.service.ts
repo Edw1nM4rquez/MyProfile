@@ -52,7 +52,7 @@ const TRANSLATIONS: Record<Language, Record<string, any>> = {
       stat_projects: 'Proyectos',
       stat_years: 'Años exp.',
       stat_companies: 'Empresas',
-      code_comment: '// POS System — flujo de orden desacoplado',
+      code_comment: '// Tickets System — validación de unicidad garantizada',
     },
     projects: {
       label: 'Proyectos',
@@ -63,14 +63,14 @@ const TRANSLATIONS: Record<Language, Record<string, any>> = {
       solution: 'Solución',
       impact: 'Impacto',
       view: 'Ver proyecto',
-      p1_title: 'Sistema POS para Restaurante',
-      p1_category: 'Backend · Lógica de Negocio',
+      p1_title: 'Plataforma de Gestión para Restaurante',
+      p1_category: 'Fullstack · Lógica de Negocio',
       p1_problem:
-        'Las órdenes y la facturación estaban acopladas, causando errores en caja y demoras en el servicio.',
+        'El restaurante gestionaba inventario, contabilidad y facturación de forma manual y fragmentada, sin sistema propio ni trazabilidad.',
       p1_solution:
-        'Diseñé un flujo desacoplado orden → cocina → facturación con control de estados, validaciones y reportes en tiempo real.',
+        'Plataforma completa con módulos de inventario, contabilidad, comunicación interna y facturación electrónica. Angular en frontend, NestJS + PostgreSQL en backend.',
       p1_impact:
-        '40% menos errores de caja. Flujo de atención 3× más rápido.',
+        'Sistema en producción. Proceso de facturación reducido de 10 a 2 minutos. Operaciones centralizadas.',
       p2_title: 'Plataforma de Gestión Empresarial',
       p2_category: 'Fullstack · Reportes',
       p2_problem:
@@ -95,6 +95,14 @@ const TRANSLATIONS: Record<Language, Record<string, any>> = {
         'Repositorio con motor de recomendación basado en IA y herramienta de adaptación de accesibilidad web, financiado por la Unión Europea.',
       p4_impact:
         'Publicación académica. +500 objetos de aprendizaje accesibles. Reconocimiento internacional.',
+      p5_title: 'Sistema de Tickets y Sorteos',
+      p5_category: 'Fullstack · Negocio Digital',
+      p5_problem:
+        'Las empresas no contaban con una plataforma propia para gestionar la venta de tickets y sorteos de forma segura, con unicidad garantizada y control de resultados.',
+      p5_solution:
+        'Sistema completo con generación y validación de tickets únicos, gestión de usuarios, módulo de ventas, administración de sorteos y arquitectura preparada para pasarelas de pago.',
+      p5_impact:
+        'Sistema escalable listo para producción. Lógica de negocio digital con foco en seguridad, trazabilidad y automatización de procesos.',
     },
     stack: {
       label: 'Stack',
@@ -242,7 +250,7 @@ const TRANSLATIONS: Record<Language, Record<string, any>> = {
       stat_projects: 'Projects',
       stat_years: 'Years exp.',
       stat_companies: 'Companies',
-      code_comment: '// POS System — decoupled order flow',
+      code_comment: '// Tickets System — guaranteed uniqueness validation',
     },
     projects: {
       label: 'Projects',
@@ -253,13 +261,14 @@ const TRANSLATIONS: Record<Language, Record<string, any>> = {
       solution: 'Solution',
       impact: 'Impact',
       view: 'View project',
-      p1_title: 'Restaurant POS System',
-      p1_category: 'Backend · Business Logic',
+      p1_title: 'Restaurant Management Platform',
+      p1_category: 'Fullstack · Business Logic',
       p1_problem:
-        'Orders and billing were tightly coupled, causing cash register errors and service delays.',
+        'The restaurant managed inventory, accounting and invoicing manually without a dedicated system or traceability.',
       p1_solution:
-        'Designed a decoupled order → kitchen → billing flow with state control, validations and real-time reports.',
-      p1_impact: '40% fewer cash register errors. Service flow 3× faster.',
+        'Complete platform with inventory, accounting, internal communication and electronic invoicing modules. Angular frontend, NestJS + PostgreSQL backend.',
+      p1_impact:
+        'System in production. Invoicing process from 10 to 2 minutes. Fully centralized operations.',
       p2_title: 'Enterprise Management Platform',
       p2_category: 'Fullstack · Reporting',
       p2_problem:
@@ -281,6 +290,14 @@ const TRANSLATIONS: Record<Language, Record<string, any>> = {
       p4_solution:
         'Repository with an AI-based recommendation engine and web accessibility adaptation tool, EU-funded project.',
       p4_impact: 'Academic publication. 500+ accessible learning objects. International recognition.',
+      p5_title: 'Ticket & Lottery System',
+      p5_category: 'Fullstack · Digital Business',
+      p5_problem:
+        'Businesses lacked a dedicated platform to manage ticket sales and lotteries securely, with guaranteed uniqueness and result control.',
+      p5_solution:
+        'Complete system with unique ticket generation and validation, user management, sales module, lottery administration and payment gateway-ready architecture.',
+      p5_impact:
+        'Production-ready scalable system. Digital business logic focused on security, traceability and process automation.',
     },
     stack: {
       label: 'Stack',

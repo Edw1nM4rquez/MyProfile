@@ -28,9 +28,9 @@ export class AiSectionComponent {
   };
 
   colorClasses: Record<string, { icon: string; border: string; bg: string }> = {
-    purple: { icon: 'text-purple-400', border: 'border-purple-500/25', bg: 'bg-purple-500/10' },
-    blue:   { icon: 'text-blue-400',   border: 'border-blue-500/25',   bg: 'bg-blue-500/10' },
-    green:  { icon: 'text-green-400',  border: 'border-green-500/25',  bg: 'bg-green-500/10' },
-    orange: { icon: 'text-orange-400', border: 'border-orange-500/25', bg: 'bg-orange-500/10' },
+    purple: { icon: 'text-purple-600', border: 'border-purple-200', bg: 'bg-purple-50' },
+    blue:   { icon: 'text-blue-600',   border: 'border-blue-200',   bg: 'bg-blue-50' },
+    green:  { icon: 'text-green-600',  border: 'border-green-200',  bg: 'bg-green-50' },
+    orange: { icon: 'text-orange-600', border: 'border-orange-200', bg: 'bg-orange-50' },
   };
 }

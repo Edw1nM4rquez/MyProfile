@@ -1,21 +1,21 @@
-﻿<!-- Stack Section — Dark Tech Portfolio -->
-<section id="stack" class="bg-gray-900/50 py-24 relative">
-  <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
-  <div class="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+﻿<!-- Stack Section — Light Tech Portfolio -->
+<section id="stack" class="bg-white py-24 relative">
+  <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+  <div class="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
 
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
 
     <!-- Header -->
     <div class="mb-16 text-center" appFadeIn>
       <div class="flex items-center justify-center gap-3 mb-4">
-        <div class="h-px bg-gray-800 w-16"></div>
-        <span class="text-blue-400 text-xs font-bold uppercase tracking-widest">{{ lang.t('stack.label') }}</span>
-        <div class="h-px bg-gray-800 w-16"></div>
+        <div class="h-px bg-gray-200 w-16"></div>
+        <span class="text-blue-600 text-xs font-bold uppercase tracking-widest">{{ lang.t('stack.label') }}</span>
+        <div class="h-px bg-gray-200 w-16"></div>
       </div>
-      <h2 class="text-4xl lg:text-5xl font-bold text-gray-100 tracking-tight mb-4">
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight mb-4">
         {{ lang.t('stack.title') }}
       </h2>
-      <p class="text-gray-400 text-lg max-w-xl mx-auto">
+      <p class="text-gray-600 text-lg max-w-xl mx-auto">
         {{ lang.t('stack.subtitle') }}
       </p>
     </div>
@@ -25,7 +25,7 @@
       <div
         *ngFor="let group of stackGroups"
         appFadeIn
-        [class]="'rounded-2xl bg-[#0B0F19] border p-6 transition-all duration-300 ' + group.borderClass">
+        [class]="'rounded-2xl bg-white border p-6 transition-all duration-300 shadow-sm hover:shadow-md ' + group.borderClass">
 
         <!-- Group title -->
         <div class="flex items-center gap-2 mb-5">
@@ -39,10 +39,10 @@
         <div class="space-y-4">
           <div *ngFor="let item of group.items" class="space-y-1.5">
             <div class="flex justify-between items-center">
-              <span class="text-gray-300 text-sm font-medium">{{ item.name }}</span>
-              <span class="text-gray-600 text-xs">{{ item.level }}%</span>
+              <span class="text-gray-700 text-sm font-medium">{{ item.name }}</span>
+              <span class="text-gray-400 text-xs">{{ item.level }}%</span>
             </div>
-            <div class="h-1 bg-gray-800 rounded-full overflow-hidden">
+            <div class="h-1 bg-gray-200 rounded-full overflow-hidden">
               <div
                 [class]="'h-full rounded-full transition-all duration-700 ' + group.dotClass"
                 [style.width]="item.level + '%'">
