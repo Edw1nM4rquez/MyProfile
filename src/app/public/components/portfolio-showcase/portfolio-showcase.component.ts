@@ -1,57 +1,53 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LangService } from 'src/app/core/services/lang.service';
+import { FadeInDirective } from 'src/app/core/directives/fade-in.directive';
 
 @Component({
   selector: 'app-portfolio-showcase',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FadeInDirective],
   templateUrl: './portfolio-showcase.component.html',
   styleUrls: ['./portfolio-showcase.component.scss']
 })
 export class PortfolioShowcaseComponent {
-  
   projects = [
     {
-      id: 1,
-      title: 'E-commerce Platform',
-      category: 'Web Application',
-      description: 'Plataforma completa de comercio electrónico con panel de administración y pasarela de pagos.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80',
-      technologies: ['Angular', 'Node.js', 'MongoDB', 'Stripe'],
-      featured: true
+      tKey: 'p1',
+      stack: ['NestJS', 'TypeORM', 'PostgreSQL', 'REST API'],
+      accent: 'blue',
+      url: '',
     },
     {
-      id: 2,
-      title: 'Task Management App',
-      category: 'Mobile App',
-      description: 'Aplicación móvil para gestión de tareas con sincronización en tiempo real.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=800&q=80',
-      technologies: ['React Native', 'Firebase', 'TypeScript'],
-      featured: false
+      tKey: 'p2',
+      stack: ['Angular', 'NestJS', 'PostgreSQL', 'Power BI'],
+      accent: 'purple',
+      url: '',
     },
     {
-      id: 3,
-      title: 'Analytics Dashboard',
-      category: 'Data Visualization',
-      description: 'Dashboard interactivo para análisis de datos con gráficos en tiempo real.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
-      technologies: ['React', 'D3.js', 'Python', 'PostgreSQL'],
-      featured: true
+      tKey: 'p3',
+      stack: ['Angular', 'TypeScript', 'REST API', 'MVC'],
+      accent: 'green',
+      url: '',
     },
     {
-      id: 4,
-      title: 'Restaurant POS System',
-      category: 'Point of Sale',
-      description: 'Sistema de punto de venta completo para restaurantes con gestión de inventario.',
-      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80',
-      technologies: ['Vue.js', 'Laravel', 'MySQL'],
-      featured: false
-    }
+      tKey: 'p4',
+      stack: ['Angular', 'Django', 'Python', 'ML'],
+      accent: 'orange',
+      url: 'https://simulab.edutech-project.org/',
+    },
   ];
 
-  constructor() { }
+  accentClasses: Record<string, { border: string; badge: string; glow: string }> = {
+    blue:   { border: 'border-blue-500/30 hover:border-blue-500/60',   badge: 'bg-blue-500/10 text-blue-400 border border-blue-500/20',   glow: 'bg-blue-500/5' },
+    purple: { border: 'border-purple-500/30 hover:border-purple-500/60', badge: 'bg-purple-500/10 text-purple-400 border border-purple-500/20', glow: 'bg-purple-500/5' },
+    green:  { border: 'border-green-500/30 hover:border-green-500/60',  badge: 'bg-green-500/10 text-green-400 border border-green-500/20',  glow: 'bg-green-500/5' },
+    orange: { border: 'border-orange-500/30 hover:border-orange-500/60', badge: 'bg-orange-500/10 text-orange-400 border border-orange-500/20', glow: 'bg-orange-500/5' },
+  };
 
-  trackByProject(index: number, project: any): number {
-    return project.id;
+  constructor(public lang: LangService) {}
+
+  openUrl(url: string): void {
+    if (url) window.open(url, '_blank');
   }
 }

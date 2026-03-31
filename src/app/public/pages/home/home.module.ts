@@ -7,10 +7,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { IntroducctionComponent } from '../../components/introducction/introducction.component';
 import { ProfileDescriptionComponent } from '../../components/profile-description/profile-description.component';
 import { ServicesComponent } from '../../components/services/services.component';
-import { ExperiencePreviewComponent } from '../../components/experience-preview/experience-preview.component';
 import { PortfolioShowcaseComponent } from '../../components/portfolio-showcase/portfolio-showcase.component';
-import { CertificationComponent } from '../../pages/certification/certification.component';
 import { ContactSectionComponent } from '../../components/contact-section/contact-section.component';
+import { AiSectionComponent } from '../../components/ai-section/ai-section.component';
+import { CertificationsComponent } from '../../components/certifications/certifications.component';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -21,10 +21,10 @@ import { ContactSectionComponent } from '../../components/contact-section/contac
     IntroducctionComponent,
     ProfileDescriptionComponent,
     ServicesComponent,
-    ExperiencePreviewComponent,
     PortfolioShowcaseComponent,
-    CertificationComponent,
     ContactSectionComponent,
+    AiSectionComponent,
+    CertificationsComponent,
   ],
 })
 export class HomeModule {}

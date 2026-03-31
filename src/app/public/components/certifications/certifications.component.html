@@ -1,0 +1,76 @@
+<!-- Certifications Section -->
+<section id="certifications" class="bg-[#0B0F19] py-24 relative overflow-hidden">
+
+  <!-- Subtle background grid -->
+  <div class="absolute inset-0 opacity-[0.03]"
+    style="background-image: linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px); background-size: 60px 60px;">
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6 lg:px-8 relative">
+
+    <!-- Section header -->
+    <div class="mb-16" appFadeIn>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-green-400 text-xs font-bold uppercase tracking-widest">{{ lang.t('certs.label') }}</span>
+        <div class="flex-1 h-px bg-gray-800 max-w-16"></div>
+      </div>
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-100 tracking-tight mb-4">
+        {{ lang.t('certs.title') }}
+      </h2>
+      <p class="text-gray-400 text-lg max-w-2xl">
+        {{ lang.t('certs.subtitle') }}
+      </p>
+    </div>
+
+    <!-- Certs grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <ng-container *ngFor="let cert of certs">
+        <div appFadeIn
+          [class]="'group relative rounded-2xl border bg-gray-900/50 p-6 transition-all duration-300 flex flex-col gap-4 ' + colorClasses[cert.color].border">
+
+          <!-- Top: issuer badge + year -->
+          <div class="flex items-center justify-between">
+            <span [class]="'text-xs font-semibold px-2.5 py-1 rounded-full ' + colorClasses[cert.color].badge">
+              {{ lang.t('certs.' + cert.key + '_issuer') }}
+            </span>
+            <span class="text-gray-600 text-xs font-mono">{{ lang.t('certs.' + cert.key + '_year') }}</span>
+          </div>
+
+          <!-- Icon + title -->
+          <div class="flex gap-4 items-start">
+            <!-- Shield / star icon depending on color -->
+            <div [class]="'flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center ' + (cert.color === 'blue' ? 'bg-blue-500/10' : cert.color === 'green' ? 'bg-green-500/10' : 'bg-purple-500/10')">
+              <svg *ngIf="cert.color === 'blue'" [class]="'w-5 h-5 ' + colorClasses[cert.color].icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+              </svg>
+              <svg *ngIf="cert.color === 'green'" [class]="'w-5 h-5 ' + colorClasses[cert.color].icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+              <svg *ngIf="cert.color === 'purple'" [class]="'w-5 h-5 ' + colorClasses[cert.color].icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+              </svg>
+            </div>
+            <h3 class="text-gray-100 font-semibold text-base leading-snug group-hover:text-white transition-colors">
+              {{ lang.t('certs.' + cert.key + '_title') }}
+            </h3>
+          </div>
+
+          <!-- Description -->
+          <p class="text-gray-500 text-sm leading-relaxed flex-1">
+            {{ lang.t('certs.' + cert.key + '_desc') }}
+          </p>
+
+          <!-- Verify link -->
+          <a [href]="cert.url" target="_blank" rel="noopener"
+            [class]="'inline-flex items-center gap-1.5 text-xs font-semibold transition-colors ' + colorClasses[cert.color].icon + ' opacity-60 hover:opacity-100'">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+            {{ lang.t('certs.verify') }}
+          </a>
+        </div>
+      </ng-container>
+    </div>
+
+  </div>
+</section>
