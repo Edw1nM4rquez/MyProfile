@@ -11,10 +11,33 @@
       <!-- LEFT: Text content -->
       <div class="space-y-8" appFadeIn>
 
+        <!-- Mobile: Profile photo -->
+        <div class="flex lg:hidden justify-center">
+          <div class="relative">
+            <div class="absolute -inset-2 rounded-2xl bg-gradient-to-br from-blue-100 via-purple-100 to-blue-50"></div>
+            <div class="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white" style="width: 180px; height: 220px;">
+              <img src="assets/img/edwin.png" alt="Edwin Marquez — Fullstack Developer" class="w-full h-full object-cover object-top" loading="eager">
+            </div>
+            <div class="absolute bottom-3 left-2 right-2 bg-white/90 backdrop-blur-sm rounded-xl px-3 py-2 shadow-lg border border-gray-100">
+              <div class="flex items-center gap-1.5 mb-0.5">
+                <img src="assets/img/lacasamarquez.png" alt="La Casa Marquez" class="h-4 w-auto object-contain">
+                <p class="text-gray-500 text-xs font-medium">La Casa Marquez</p>
+              </div>
+              <p class="text-gray-900 font-semibold text-xs">Edwin Marquez</p>
+            </div>
+          </div>
+        </div>
+
         <!-- Available badge -->
         <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-gray-200 bg-gray-50">
           <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
           <span class="text-green-600 text-xs font-semibold tracking-wide">{{ lang.t('hero.available') }}</span>
+        </div>
+
+        <!-- Brand -->
+        <div class="flex items-center gap-2.5">
+          <img src="assets/img/lacasamarquez.png" alt="La Casa Marquez" class="h-7 w-auto object-contain">
+          <span class="text-gray-700 text-sm font-semibold tracking-wide">La Casa Marquez</span>
         </div>
 
         <!-- Main headline -->
@@ -67,44 +90,40 @@
         </div>
       </div>
 
-      <!-- RIGHT: Code block visual -->
-      <div class="hidden lg:block" appFadeIn>
-        <div class="code-block glow-blue">
-          <!-- Window bar -->
-          <div class="cb-bar">
-            <span class="cb-red"></span>
-            <span class="cb-yellow"></span>
-            <span class="cb-green"></span>
-            <span class="text-gray-500 text-xs ml-3 font-mono">order.service.ts</span>
+      <!-- RIGHT: Profile photo -->
+      <div class="hidden lg:flex flex-col items-center gap-6" appFadeIn>
+
+        <!-- Photo frame -->
+        <div class="relative">
+          <!-- Decorative ring -->
+          <div class="absolute -inset-3 rounded-3xl bg-gradient-to-br from-blue-100 via-purple-100 to-blue-50"></div>
+          <!-- Accent dot top-right -->
+          <div class="absolute -top-2 -right-2 w-6 h-6 bg-blue-600 rounded-full z-10 shadow-md"></div>
+          <!-- Accent dot bottom-left -->
+          <div class="absolute -bottom-2 -left-2 w-4 h-4 bg-purple-400 rounded-full z-10 shadow-md"></div>
+
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
+               style="width: 340px; height: 420px;">
+            <img
+              src="assets/img/edwin.png"
+              alt="Edwin Marquez — Fullstack Developer"
+              class="w-full h-full object-cover object-top"
+              loading="eager">
           </div>
-          <!-- Code -->
-          <pre><span class="cm">{{ lang.t('hero.code_comment') }}</span>
 
-<span class="kw">@Injectable</span>()
-<span class="kw">export class</span> <span class="ty">OrderService</span> &#123;
-  <span class="kw">constructor</span>(
-    <span class="kw">private</span> <span class="fn">repo</span>: <span class="ty">OrderRepository</span>,
-    <span class="kw">private</span> <span class="fn">kitchen</span>: <span class="ty">KitchenService</span>,
-    <span class="kw">private</span> <span class="fn">billing</span>: <span class="ty">BillingService</span>,
-  ) &#123;&#125;
-
-  <span class="kw">async</span> <span class="fn">placeOrder</span>(dto: <span class="ty">CreateOrderDto</span>) &#123;
-    <span class="kw">const</span> order = <span class="kw">await</span> <span class="kw">this</span>.<span class="fn">repo</span>.<span class="fn">create</span>(&#123;
-      ...dto, status: <span class="ty">OrderStatus</span>.<span class="num">PENDING</span>,
-    &#125;);
-    <span class="kw">await</span> <span class="kw">this</span>.<span class="fn">kitchen</span>.<span class="fn">notify</span>(order.id);
-    <span class="kw">return</span> order;
-  &#125;
-
-  <span class="kw">async</span> <span class="fn">closeOrder</span>(id: <span class="ty">string</span>) &#123;
-    <span class="kw">const</span> order = <span class="kw">await</span> <span class="kw">this</span>.<span class="fn">repo</span>.<span class="fn">findOne</span>(id);
-    <span class="kw">return</span> <span class="kw">this</span>.<span class="fn">billing</span>.<span class="fn">generateInvoice</span>(order);
-  &#125;
-&#125;</pre>
+          <!-- Name card overlay at bottom -->
+          <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg border border-gray-100 z-10">
+            <div class="flex items-center gap-2 mb-1">
+              <img src="assets/img/lacasamarquez.png" alt="La Casa Marquez" class="h-5 w-auto object-contain">
+              <p class="text-gray-500 text-xs font-medium">La Casa Marquez</p>
+            </div>
+            <p class="text-gray-900 font-semibold text-sm">Edwin Marquez</p>
+            <p class="text-blue-600 text-xs font-medium mt-0.5">Fullstack Developer · Backend · AI</p>
+          </div>
         </div>
 
-        <!-- Social links below code -->
-        <div class="flex items-center gap-6 mt-6 pl-2">
+        <!-- Social links below photo -->
+        <div class="flex items-center gap-6">
           <a href="https://github.com/Edw1nM4rquez" target="_blank" rel="noopener"
             class="flex items-center gap-2 text-gray-500 hover:text-gray-800 text-sm transition-colors">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

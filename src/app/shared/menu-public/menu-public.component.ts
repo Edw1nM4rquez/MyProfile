@@ -15,6 +15,7 @@ export class MenuPublicComponent {
   navLinks = [
     { key: 'nav.home', href: '/', anchor: '' },
     { key: 'nav.projects', href: '/', anchor: 'projects' },
+    { key: 'nav.experience', href: '/', anchor: 'work-section' },
     { key: 'nav.about', href: '/', anchor: 'about' },
     { key: 'nav.contact', href: '/', anchor: 'contact' },
   ];

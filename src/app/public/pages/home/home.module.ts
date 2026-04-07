@@ -11,6 +11,7 @@ import { PortfolioShowcaseComponent } from '../../components/portfolio-showcase/
 import { ContactSectionComponent } from '../../components/contact-section/contact-section.component';
 import { AiSectionComponent } from '../../components/ai-section/ai-section.component';
 import { CertificationsComponent } from '../../components/certifications/certifications.component';
+import { ExperiencePreviewComponent } from '../../components/experience-preview/experience-preview.component';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -25,6 +26,7 @@ import { CertificationsComponent } from '../../components/certifications/certifi
     ContactSectionComponent,
     AiSectionComponent,
     CertificationsComponent,
+    ExperiencePreviewComponent,
   ],
 })
 export class HomeModule {}
