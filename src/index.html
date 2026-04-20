@@ -26,38 +26,7 @@
   <style>
     body { margin: 0; background-color: #f8fafc; }
     canvas { display: block; }
-    /* Accessibility panel button styling */
-    .fl-panelBar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 40px;
-      z-index: 9999;
-    }
-    .fl-prefsEditor-buttons {
-      display: flex;
-      gap: 8px;
-      padding: 6px 12px;
-      background: rgba(11, 15, 25, 0.95);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .fl-prefsEditor-reset,
-    .fl-prefsEditor-showHide {
-      padding: 4px 12px;
-      border-radius: 4px;
-      font-size: 12px;
-      cursor: pointer;
-      border: 1px solid rgba(255,255,255,0.15);
-      background: rgba(255,255,255,0.06);
-      color: rgba(255,255,255,0.75);
-      transition: background 0.2s, color 0.2s;
-    }
-    .fl-prefsEditor-reset:hover,
-    .fl-prefsEditor-showHide:hover {
-      background: rgba(255,255,255,0.12);
-      color: #fff;
-    }
+    /* uiOptions bar: detailed rules live in styles.scss (avoids layout gap + white strip) */
   </style>
 </head>
 <body>
