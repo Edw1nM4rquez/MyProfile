@@ -261,6 +261,8 @@ const TRANSLATIONS: Record<Language, Record<string, any>> = {
       focus_ent_title: 'Enterprise Solutions',
       focus_ent_desc: 'Experiencia en desarrollo de soluciones empresariales escalables con arquitecturas robustas y mejores prácticas.',
       back_portfolio: 'Volver al Portafolio',
+      preview_hint:
+        'Vista previa en sitio: muchos sitios bloquean iframes; abre el enlace para ver el proyecto con fluidez.',
     },
   },
 
@@ -494,6 +496,8 @@ const TRANSLATIONS: Record<Language, Record<string, any>> = {
       focus_ent_title: 'Enterprise Solutions',
       focus_ent_desc: 'Experience building scalable enterprise solutions with robust architectures and best practices.',
       back_portfolio: 'Back to Portfolio',
+      preview_hint:
+        'Open the link to view the live site—embedded previews are skipped so this page stays fast and reliable.',
     },
   },
 };

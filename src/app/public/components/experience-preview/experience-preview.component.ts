@@ -1,5 +1,6 @@
 import { Component, Input, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import Experience from 'src/app/core/interfaces/Experience';
 import { LangService } from 'src/app/core/services/lang.service';
@@ -7,7 +8,7 @@ import { LangService } from 'src/app/core/services/lang.service';
 @Component({
   selector: 'app-experience-preview',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './experience-preview.component.html',
   styleUrls: ['./experience-preview.component.scss']
 })
@@ -19,6 +20,12 @@ export class ExperiencePreviewComponent {
 
   private readonly experienceEs: Experience[] = [
     {
+      title: 'Chulla Vida EC - Desarrollador Web',
+      description:
+        'Desarrollé el sitio web oficial de Chulla Vida EC, una plataforma de venta de boletos y sistemas de rifas orientada a la asignación de beneficios como bonos y premios.',
+      date: 'mar.2026 - abr.2026', urlDomain: 'https://chullavidaec.com/',
+    },
+    {
       title: 'Tifozzi Ecuador - Desarrollador Web',
       description: 'Desarrollé el sitio web oficial de Tifozzi, cadena de restaurantes de cocina italo-argentina con más de 5 sucursales en Azogues, Cuenca y Cañar, fundada en 2013. Implementé catálogo de menú interactivo, sistema de reservaciones, carta digital en PDF, selector de sucursales y diseño responsivo acorde a la identidad de la marca.',
       date: 'mar.2026', urlDomain: 'https://www.tifozziecuador.com/',
@@ -26,7 +33,7 @@ export class ExperiencePreviewComponent {
     {
       title: 'Ecuador Direct Roses | Trebol Roses | Agro Alto - Desarrollador Full Stack',
       description: 'Desarrollé una plataforma integral para la gestión de tareas, comunicación interna y control de inventario y contabilidad. Apliqué Angular para construir una experiencia de usuario moderna y eficiente. Implementé serialización y análisis de datos para reportes dinámicos en Power BI.',
-      date: 'abr.2024 - actualidad', urlDomain: '',
+      date: 'abr.2024 - mar.2026', urlDomain: '',
     },
     {
       title: 'Orion Governance - Desarrollador Frontend | USA',
@@ -61,6 +68,13 @@ export class ExperiencePreviewComponent {
   ];
 
   private readonly experienceEn: Experience[] = [
+    {
+      title: 'Chulla Vida EC - Web Developer',
+      description:
+        'Developed the official website for Chulla Vida EC, a ticket sales and raffle-style platform for assigning benefits such as bonuses and prizes.',
+      date: 'Mar.2026 - Apr.2026',
+      urlDomain: 'https://chullavidaec.com/',
+    },
     {
       title: 'Tifozzi Ecuador - Web Developer',
       description: 'Developed the official website for Tifozzi, an italo-argentinian restaurant chain with 5+ locations in Azogues, Cuenca and Cañar, founded in 2013. Implemented an interactive menu catalog, reservation system, digital PDF menu, branch selector and responsive design aligned with brand identity.',

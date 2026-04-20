@@ -65,15 +65,29 @@
                     </div>
                   </div>
                   
-                  <!-- Iframe Content -->
+                  <!-- Static preview: many sites block iframes; N iframes here froze the tab -->
                   <div class="aspect-[16/10] bg-gray-50">
                     <ng-container *ngIf="item.urlDomain; else noPreviewPro">
-                      <iframe
-                        class="w-full h-full border-0"
-                        [src]="sanitizerUrl(item.urlDomain)"
-                        [title]="item.title + ' — Vista previa'"
-                        loading="lazy">
-                      </iframe>
+                      <ng-container *ngIf="item.image; else hostPlaceholderPro">
+                        <div class="w-full h-full flex items-center justify-center p-6">
+                          <img
+                            [src]="item.image"
+                            alt=""
+                            class="max-h-full max-w-full object-contain"
+                            loading="lazy"
+                            decoding="async" />
+                        </div>
+                      </ng-container>
+                      <ng-template #hostPlaceholderPro>
+                        <div class="w-full h-full flex flex-col items-center justify-center gap-3 px-6 text-center text-gray-500">
+                          <svg class="w-12 h-12 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                          </svg>
+                          <p class="text-sm font-medium text-gray-700 break-all">{{ displayHost(item.urlDomain) }}</p>
+                          <p class="text-xs text-gray-500 max-w-sm leading-relaxed">{{ lang.t('experience.preview_hint') }}</p>
+                        </div>
+                      </ng-template>
                     </ng-container>
                     <ng-template #noPreviewPro>
                       <div class="w-full h-full flex flex-col items-center justify-center gap-3 text-gray-400">
@@ -179,15 +193,29 @@
                     </div>
                   </div>
                   
-                  <!-- Iframe Content -->
+                  <!-- Static preview (see professional section) -->
                   <div class="aspect-[16/10] bg-gray-50">
                     <ng-container *ngIf="item.urlDomain; else noPreviewPers">
-                      <iframe
-                        class="w-full h-full border-0"
-                        [src]="sanitizerUrl(item.urlDomain)"
-                        [title]="item.title + ' — Vista previa'"
-                        loading="lazy">
-                      </iframe>
+                      <ng-container *ngIf="item.image; else hostPlaceholderPers">
+                        <div class="w-full h-full flex items-center justify-center p-6">
+                          <img
+                            [src]="item.image"
+                            alt=""
+                            class="max-h-full max-w-full object-contain"
+                            loading="lazy"
+                            decoding="async" />
+                        </div>
+                      </ng-container>
+                      <ng-template #hostPlaceholderPers>
+                        <div class="w-full h-full flex flex-col items-center justify-center gap-3 px-6 text-center text-gray-500">
+                          <svg class="w-12 h-12 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                          </svg>
+                          <p class="text-sm font-medium text-gray-700 break-all">{{ displayHost(item.urlDomain) }}</p>
+                          <p class="text-xs text-gray-500 max-w-sm leading-relaxed">{{ lang.t('experience.preview_hint') }}</p>
+                        </div>
+                      </ng-template>
                     </ng-container>
                     <ng-template #noPreviewPers>
                       <div class="w-full h-full flex flex-col items-center justify-center gap-3 text-gray-400">
@@ -292,7 +320,7 @@
         </div>
         
         <div class="pt-8">
-          <a href="/" 
+          <a routerLink="/"
              class="inline-block bg-gray-900 text-white px-8 py-4 rounded-sm font-medium text-sm uppercase tracking-wide hover:bg-gray-800 transition-colors duration-300">
             {{ lang.t('experience.back_portfolio') }}
           </a>

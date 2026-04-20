@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { RouterLink } from '@angular/router';
 import Experience from 'src/app/core/interfaces/Experience';
 import { LangService } from 'src/app/core/services/lang.service';
 
@@ -9,7 +9,7 @@ import { LangService } from 'src/app/core/services/lang.service';
   standalone: true,
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
 })
 export class ProjectsComponent {
   private readonly experienceEs: Experience[] = [
@@ -64,9 +64,15 @@ export class ProjectsComponent {
     return this.lang.lang === 'en' ? this.projectsEn : this.projectsEs;
   }
 
-  constructor(private sanitizer: DomSanitizer, public lang: LangService) {}
+  constructor(public lang: LangService) {}
 
-  public sanitizerUrl(url: string) {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  /** Hostname for lightweight preview (avoids embedding many third-party iframes). */
+  displayHost(url: string): string {
+    try {
+      const normalized = /^https?:\/\//i.test(url) ? url : `https://${url}`;
+      return new URL(normalized).hostname;
+    } catch {
+      return url.replace(/^https?:\/\//i, '').split('/')[0] || url;
+    }
   }
 }
