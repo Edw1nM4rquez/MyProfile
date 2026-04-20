@@ -43,6 +43,7 @@ const TRANSLATIONS: Record<Language, Record<string, any>> = {
     },
     hero: {
       available: 'Disponible para trabajar',
+      wave: 'Hola, soy Edwin — fullstack developer.',
       title_line1: 'Construyo sistemas',
       title_line2: 'reales que funcionan.',
       subtitle:
@@ -262,7 +263,7 @@ const TRANSLATIONS: Record<Language, Record<string, any>> = {
       focus_ent_desc: 'Experiencia en desarrollo de soluciones empresariales escalables con arquitecturas robustas y mejores prácticas.',
       back_portfolio: 'Volver al Portafolio',
       preview_hint:
-        'Vista previa en sitio: muchos sitios bloquean iframes; abre el enlace para ver el proyecto con fluidez.',
+        'Vista previa estática. Muchos sitios no permiten embeberse en iframes; usa «Visitar» para abrir el sitio real.',
     },
   },
 
@@ -282,6 +283,7 @@ const TRANSLATIONS: Record<Language, Record<string, any>> = {
     },
     hero: {
       available: 'Available to work',
+      wave: "Hi, I'm Edwin — a fullstack developer.",
       title_line1: 'I build real systems',
       title_line2: 'that actually work.',
       subtitle:
@@ -497,7 +499,7 @@ const TRANSLATIONS: Record<Language, Record<string, any>> = {
       focus_ent_desc: 'Experience building scalable enterprise solutions with robust architectures and best practices.',
       back_portfolio: 'Back to Portfolio',
       preview_hint:
-        'Open the link to view the live site—embedded previews are skipped so this page stays fast and reliable.',
+        'Static preview. Many sites block iframes; use «Visit» to open the live project in a new tab.',
     },
   },
 };

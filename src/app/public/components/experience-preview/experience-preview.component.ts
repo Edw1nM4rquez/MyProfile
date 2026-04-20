@@ -16,6 +16,8 @@ export class ExperiencePreviewComponent {
   @Input() isPreview: boolean = false;
 
   public activeIframeExperience: Experience | null = null;
+  /** Stable [src] binding — recreating SafeResourceUrl each CD cycle reloads the iframe. */
+  public activeIframeSafeUrl: SafeResourceUrl | null = null;
   public iframeLoading: boolean = false;
 
   private readonly experienceEs: Experience[] = [
@@ -127,18 +129,16 @@ export class ExperiencePreviewComponent {
 
   constructor(private sanitizer: DomSanitizer, public lang: LangService) {}
 
-  sanitizerUrl(url: string): SafeResourceUrl {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-  }
-
   openIframePreview(experience: Experience) {
     this.activeIframeExperience = experience;
+    this.activeIframeSafeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(experience.urlDomain);
     this.iframeLoading = true;
     document.body.style.overflow = 'hidden';
   }
 
   closeIframePreview() {
     this.activeIframeExperience = null;
+    this.activeIframeSafeUrl = null;
     this.iframeLoading = false;
     document.body.style.overflow = '';
   }

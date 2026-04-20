@@ -1,23 +1,24 @@
-﻿<!-- Projects Section — Light Tech Portfolio -->
-<section id="projects" class="bg-gray-50 py-24 relative overflow-hidden">
+﻿<!-- Projects — depth + grid (pairs with hero mesh) -->
+<section id="projects" class="relative py-24 overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white">
 
-  <!-- Subtle background grid -->
-  <div class="absolute inset-0 opacity-[0.4]"
-    style="background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px); background-size: 60px 60px;">
+  <div class="pointer-events-none absolute inset-0 opacity-[0.45]"
+    style="background-image: linear-gradient(rgba(15,23,42,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.06) 1px, transparent 1px); background-size: 56px 56px;">
   </div>
+  <div class="pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-violet-200/40 blur-3xl"></div>
+  <div class="pointer-events-none absolute bottom-0 left-0 h-64 w-64 rounded-full bg-cyan-200/35 blur-3xl"></div>
 
-  <div class="max-w-6xl mx-auto px-6 lg:px-8 relative">
+  <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
 
     <!-- Section header -->
     <div class="mb-16" appFadeIn>
       <div class="flex items-center gap-3 mb-4">
-        <span class="text-blue-400 text-xs font-bold uppercase tracking-widest">{{ lang.t('projects.label') }}</span>
-        <div class="flex-1 h-px bg-gray-300 max-w-16"></div>
+        <span class="text-violet-600 text-xs font-bold uppercase tracking-widest">{{ lang.t('projects.label') }}</span>
+        <div class="flex-1 h-px bg-gradient-to-r from-violet-300 to-transparent max-w-24"></div>
       </div>
-      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight mb-4">
+      <h2 class="font-display text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight mb-4">
         {{ lang.t('projects.title') }}
       </h2>
-      <p class="text-gray-600 text-lg max-w-2xl">
+      <p class="text-slate-600 text-lg max-w-2xl leading-relaxed">
         {{ lang.t('projects.subtitle') }}
       </p>
     </div>
