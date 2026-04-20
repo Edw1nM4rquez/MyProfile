@@ -1,0 +1,8 @@
+:host {
+  display: block;
+}
+
+/* Global `a:hover { opacity: 0.7 }` would dull our explicit hover colors */
+:host a:hover {
+  opacity: 1;
+}
